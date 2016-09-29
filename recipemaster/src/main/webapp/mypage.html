@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html class="sticky-header-negative sticky-header-active"> 
+<head>
+<meta charset="UTF-8">
+<title>my page</title>
+
+<link rel="stylesheet"
+  href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/rcp-template/animate.css">
+<link rel="stylesheet" href="css/rcp-template/theme.css">
+<link rel="stylesheet" href="css/rcp-template/theme-element.css">
+<link rel="stylesheet" href="css/rcp-template/theme-animate.css">
+<link rel="stylesheet" href="css/rcp-template/skin-restaurant.css">
+
+<link rel="stylesheet"
+  href="/node_modules/sweetalert/dist/sweetalert.css">
+<link rel="stylesheet" href="/css/subscribe.css">
+<link rel="stylesheet" href="/css/mypage.css">
+<link rel="stylesheet" href="/css/mainlist.css">
+<link rel="stylesheet" href="css/common/starrating.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/subscribe.css">
+<link rel="stylesheet"
+  href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
+<!-- Template css -->
+<link rel="stylesheet" href="css/template/animate.css">
+<link rel="stylesheet" href="css/template/main.css"> 
+<link rel="stylesheet" href="css/template/styles.css">
+<link rel="stylesheet" href="css/template/plugins.css">
+
+<!-- 사용자 정의 css -->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/userinfobox.css">
+<link rel="stylesheet" href="css/common/signup.css">
+<link rel="stylesheet" href="css/common/popup.css">
+<link rel="stylesheet" href="css/updateImg.css">
+<link rel="stylesheet" href="css/mainlist.css">
+
+<!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->
+<link rel="stylesheet" href="css/detail.css">
+<!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->
+
+<!-- 성현 -->
+<!-- <link rel="stylesheet" href="css/common_list_topbar.css"> -->
+
+<style id='theme58872-style-inline-css' type='text/css'></style>
+<script src="js/common/app-context.js"></script>
+</head>
+<body  data-spy="scroll"  data-target="#navSecondary" data-offset="170">
+
+<header id="header" class="header-narrow site-header wide" role="banner" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+ 
+     <div class="header-body"></div>    
+        
+</header>
+
+
+  <div id="editUserInfo-pop-up-banner" style="display: none;">
+    <div class="inset">
+      <!-----start-main---->
+      <form action="user/update.json" method="post" id="updateUserForm"
+        class="template-form" enctype="multipart/form-data">
+        <input type="hidden" name="userNo" id="updateFormUserNo"> <input
+          type="hidden" name="email" id="updateFormEmail">
+        <div class="float_left"
+          style="width: 40%; height: 100%; position: relative;">
+          <div class="rcp-up-preview img-wrapper"></div>
+          <div class="file-upload-wrapper">
+            <input id="profileImage" type="file" name="profileImage"
+              class="file-upload-native" accept="image/*" />
+          </div>
+          
+          <div class="rcp-laytext">
+            <div id="updateBoxName"></div>
+            <div id="updateBoxGrade"></div>
+            <div id="updateBoxEmail"></div>
+            <div class="submit rcp-userinfo-save-btn">
+              <input id="updateUserInfo" class="find-password-btn" type="submit"
+                value="저장">
+            </div>
+          </div>
+        </div>
+
+        <div class="float_left"
+          style="width: 60%; height: 100%;">
+          <div>
+            <span><label>이전 비밀번호</label></span> <span><input
+              id="beforePwd" type="password" name="beforePassword" class="form-template"></span>
+          </div>
+          <div>
+            <span><label>변경 비밀번호</label></span> <span><input
+              id="afterPwd" type="password" name="afterpassword" class="form-template"></span>
+          </div>
+          <div>
+            <span><label>변경 비밀번호 확인</label></span> <span><input
+              id="afterPwdcf" type="password" class="form-template"></span>
+          </div>
+          <div>
+            <span><label>자기소개</label></span> <span><textarea
+              id="introduce" type="text" name="intro" class="form-template"></textarea></span>
+          </div>
+        </div>
+      </form>
+      <div id="naver_id_login" class="display_none"></div>
+    </div>
+  </div>
+
+      
+<!-- 
+  회원정보수정 bpopup
+  <div id='editUserInfo-pop-up-banner'>
+    <form action="user/update.json" method="post" id="updateUserForm"
+      enctype="multipart/form-data">
+      <input type="hidden" name="userNo" id="updateFormUserNo"> <input
+        type="hidden" name="email" id="updateFormEmail">
+      <div class="rcp-laytop">
+        유저 이미지 업로드 --용이  !!!!!enctype?????16.08.12
+        <div class="rcp-up-preview img-wrapper col-md-1"></div>
+        <div class="file-upload-wrapper">
+          <input id="profileImage" type="file" name="profileImage"
+            class="file-upload-native" accept="image/*" /> <input type="text"
+            disabled placeholder="이미지" class="file-upload-text" />
+        </div>
+        유저 이미지 업로드 끝--용이 
+        <div class="col-md-11 rcp-laytext">
+          <h4 id="updateBoxName"></h4>
+          <h5 id="updateBoxGrade">Master Chef</h5>
+          <h5 id="updateBoxEmail"></h5>
+        </div>
+      </div>
+      <div class="rcp-section">
+        <span>회원정보수정</span>
+      </div>
+      <div class="rcp-innnersec">
+        <div id="beforePwd-div"
+          class="rcp-mar rcp-info form-group form-group-md has-warning has-feedback">
+          <input class="form-control" type="password" id="beforePwd"
+            name="beforePassword" placeholder="이전비밀번호 입력">
+        </div>
+
+        <div id="afterPwd-div"
+          class="rcp-mar rcp-info form-group form-group-md has-warning has-feedback">
+          <input class="form-control" type="password" id="afterPwd"
+            name="password" placeholder="변경비밀번호 입력">
+        </div>
+
+        <div id="afterPwdcf-div"
+          class="rcp-mar rcp-info form-group form-group-md has-warning has-feedback">
+          <input class="form-control" type="password" id="afterPwdcf"
+            placeholder="변경비밀번호 확인">
+        </div>
+
+        <div
+          class="rcp-mar rcp-info form-group form-group-md has-success has-feedback">
+          <textarea class="form-control rcp-tara" rows="5rem" cols="30rem"
+            id="introduce" name="intro" placeholder="자기소개를 입력해주세요"></textarea>
+        </div>
+      </div>
+      <div class="rcp-sign-membership">
+        <button id="updateUserInfo" type="submit">확인</button>
+        <a href="#"><span id="updateUserInfo">확인</span></a> <a href="#"><span
+          id="updateUserReset">취소</span></a>
+      </div>
+    </form>
+  </div>
+  
+  --> 
+  <div>
+    <section class="rcp-fullpage">
+      <div class="rcp-profileCover">
+        <section class="rcp-pagetop">
+          <div class="rcp-topimg-position">
+            
+            <div class="rcp-mypage-container">
+            <div>
+            <a class="rcp-topimg-border"> <img src="img/profileImg/default.jpg"
+              class="rcp-topimg">
+            </a>
+              <input type="hidden" id="mypage-userNo" value="">
+                <div class="float_left" style="width: 205px;">
+                  <h2 class="rcp-userPage-userName float_left"></h2>
+                  <a id="subsWrapper" href="javascript:;" class="float_left text_deco_none display_none" style="margin-top: 17px;">
+                    <div class="subscribeBtn">
+                      <span class="subscribeBtn-text">구독하기</span><div class="glyphicon glyphicon-pushpin" aria-hidden="true"></div>
+                    </div>
+                  </a>
+                  <div id="userInfoEditBtn" class="float_left display_none" style="color: white; padding-top: 17px;">
+                    <a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                  </div>      
+                </div> 
+	               
+              </div>
+              <div style="height: 45px; border-top: 1px solid #b9b9b9; margin-top: 40px;"></div>
+              <div class="rcp-userInfo">
+	              <p class="rcp-count-visit rcp-mypage-userInfo col-sm-3 col-md-3">방문자 <span id="visitNum" >명</span>
+	              <p class="rcp-count-like rcp-mypage-userInfo col-sm-3 col-md-3">좋아요 <span id="likeNum" >개</span>
+	              <p class="rcp-count-scrap rcp-mypage-userInfo col-sm-3 col-md-3">스크랩 <span id="scrapNum" >개</span>
+	              <p class="rcp-count-grade rcp-mypage-userInfo col-sm-3 col-md-3">구독자수<span id="subsNum" >명</span>
+              </div>
+             <!--  <button class="btn btn-default rcp-topbtn">구독하기</button> -->
+       </div>
+          </div>
+        </section>
+        
+
+      </div>
+      </section>
+<!-- 
+      <section class="rcp-pagemiddle1">
+
+        <div class="rcp-pagemiddle-div1">
+          <img class="rcp-pagemiddle-div-img" src="img/profileImg/users.png">
+          <span class="heading">방문자</span> <span class="value" id="visitNum">명</span>
+        </div>
+        <div class="rcp-pagemiddle-div2">
+          <img class="rcp-pagemiddle-div-img" src="img/profileImg/like-1.png">
+          <span class="heading">좋아요</span> <span class="value" id="likeNum">개</span>
+        </div>
+        <div class="rcp-pagemiddle-div3">
+          <img class="rcp-pagemiddle-div-img"
+            src="img/profileImg/attachment.png"> <span class="heading">스크랩</span>
+          <span class="value" id="scrapNum">개</span>
+        </div>
+        <div class="rcp-pagemiddle-div4">
+          <img class="rcp-pagemiddle-div-img" src="img/profileImg/star-1.png">
+          <span class="heading">평점</span> <span class="value" id="gradeNum">점</span>
+        </div>
+      </section>
+ 
+      page hidden
+      <input id="rcpList-pageNo" type="hidden" value="1"> <input
+        id="scsRcpList-pageNo" type="hidden" value="1">
+
+    </section> -->
+
+   <!--   <section class="rcp-pageleft">
+      <div>
+        <div id="tabs" class="rcp-vst-tabs">
+          <ul>
+            <li><a href="#tabs-1" style="width: 243px;">My Recipe</a></li>
+            <li><a href="#tabs-2" style="width: 242px;" id="scsPage">구독중인
+                페이지</a></li>
+            <li><a href="#tabs-3" style="width: 242px;">스크랩</a></li>
+            <li><a href="#tabs-4" style="width: 242px;">방명록</a></li>
+          </ul>
+          <div id="tabs-1">
+            <div class="rcp-main-right">
+              <div class="rcp-subscribe">
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </section>
+            
+ -->
+
+
+<section class="p-xlg rcp-p-xlg-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 center">
+                <h2 class="mt-lg mb-sm">For your <strong>Page</strong></h2>
+                 <p class="font-size-md">회원님에 대한 모든 레시피 정보를 확인하실 수 있습니다.<br>스크랩, 구독한 사람의 레시피, 방명록이 노출됩니다.</p>
+
+                <hr class="custom-divider">
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+
+    <section class="ht-section hs-recipes grid">
+      <div class="hs-header">
+        <div class="container">
+        <input type="hidden" value="1" id="tabId">
+        <ul class="isotope-filter" >
+          <li class="is-filtered"><a href="#" id="searchRecipe"  >레시피</a></li>
+          <li><a href="#" id="searchScrap" >스크랩</a></li>
+          <li><a href="#" id="searchSubscribe">구독중인 페이지</a></li>
+          <li><a href="#" data-toggle="tab" id="visitorWrite">방명록</a></li>
+        </ul></div>
+        
+      </div>
+
+      <div id="tabs-1">
+        <div class="rcp-main-right">
+          <div class="rcp-subscribe"></div>
+          <div class="hs-content">
+            <div class="container">
+              <div class="row">
+                  <div class="rcp-mypage-section">                 
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="tabs-2">
+        <div class="rcp-main-right">
+          <div class="rcp-subscribe"></div>
+          <div class="hs-content">
+            <div class="container">
+              <div class="row">
+                  <div class="rcp-mypage-section">                 
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="tabs-3">
+        <div class="rcp-main-right">
+          <div class="rcp-subscribe"></div>
+          <div class="hs-content">
+            <div class="container">
+              <div class="row">
+                  <div class="rcp-mypage-section">                 
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabs-4">
+        <div class="rcp-main-right">
+          <div class="rcp-subscribe"></div>
+          <div class="hs-content hs-content-visit">
+            <div class="container">
+              <div class="row">
+                <div class="rcp-Vst-write" id="quick"
+                    style="margin-left: 2%; position: fixed; background-color: #FCFCFC ; top: 85%; left: 30.5%; border: 1px solid #BDBDBD ; height: 96px; width: 565px; text-align: center; color: #6799FF ;">
+                    <div class="inputWrite">
+                        <textarea id="rcp-rpcontent" rows="3" cols="50%"
+                            style="resize: none;" placeholder="방명록을 입력해주세요"></textarea>
+                        <button id="rcp-rpBtn" class="rcp-Vst-inputBtn btn btn-info">등록</button>
+                    </div>
+                </div>
+                <section class="Vst" id="Vst">
+                  <!-- 방명록  -->
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </section>
+      </div>
+      
+      
+  
+<!-- -------------------------------recipe detail-------------------------------- -->
+
+  <div id='detail_pop_up'>
+    <div class="rcp-detail-form row">
+
+      <div class="rcp-720" id="rcp-720">
+        <div class="rcp-header">
+          <h2 class="title"></h2>
+          <p class="hash"></p>
+          <p class="date"></p>
+          <div class="timerZone"></div>
+        </div>
+        <hr/>               
+        <div class="rcp-detail-body"></div>
+      </div>
+
+      <div class="rcp-304"></div>
+
+      <div class="rcp-taps">
+          <input id="detail-recipeNo" type="hidden" value="" name="recipeNo">
+       
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->  
+  
+ 
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="node_modules/sweetalert/dist/sweetalert-dev.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/template/jquery-ui-1.12.0/jquery-ui.min.js"></script>
+	<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+
+	<script src="node_modules/blueimp-load-image/js/load-image.all.min.js"></script>
+	<script
+		src="node_modules/blueimp-canvas-to-blob/js/canvas-to-blob.min.js"></script>
+	<!-- <script src="js/jquery.iframe-transport.js"></script> -->
+	<script
+		src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+	<script
+		src="node_modules/blueimp-file-upload/js/jquery.fileupload-process.js"></script>
+	<script
+		src="node_modules/blueimp-file-upload/js/jquery.fileupload-image.js"></script>
+	<script
+		src="node_modules/blueimp-file-upload/js/jquery.fileupload-validate.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src="js/template/naverLogin_implicit-1.0.2.js"></script>
+	<!--  사용자 js -->
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/common/signup.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/updateUser.js"></script>
+	
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+<script id="temp" type="text/x-handlebars-template">
+{{#each data}}
+{{#regStatus}}
+
+<div>
+<div class="isotope-grid" id="grid-2">
+          <div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+            <div class="entry-inner">
+              {{#each representImages}}  
+              <input type="hidden" class="forBackgroundRepresentImg" value="{{this}}">
+              {{/each}}
+               {{#transientStorage}}
+                <p class="transientStorage">임시저장</p>
+              {{/transientStorage}}
+               <p class="rcp-count-images">{{countImage representImages}}</p>
+              <div class="rcp-count-images-bg">
+              </div>
+              <div class="entry-media" name="recipe-subscribe-image" style="background-image:url(img/representImg/{{representImages representImages}}">
+               
+                <div class="entry-action">
+                  <div class="entry-action-inner">                  
+                  </div>
+                </div>
+              </div>
+              <!-- ./ entry-media -->
+              <div class="content-wrapper">
+                <h3 class="entry-name"><a href="#">
+                <input type="hidden" name="recipeNo" value="{{recipeNo}}">
+                <p class="detail rcp-p-black">{{recipeName}}</p></a></h3>                
+                <a href="mypage.html?{{user.email}}">
+                <input type="hidden" class="rcp-hidden-email" value="{{user.email}}">
+                <p class="entry-author rcp-userName">{{user.userName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{recipeDate}}</p>
+                </a>
+                <div class="entry-meta">
+                  <div class="foo-wrapper">
+                     <input type="hidden" name="recipeNo" value="{{recipeNo}}">
+                    <span>
+                    <a href="#" class="rcp-like {{#isLike}}active{{/isLike}}"><div class="glyphicon glyphicon-heart-empty rcp-i-tag-margin-right-top"></div>
+                    <span>좋아요 <span>{{countLike}}<span></span></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="meta-time">{{cookTime}}분 소요</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                    <span>
+                     <a href="#" class="rcp-scrap {{#isScrap}}active{{/isScrap}}"><div class="glyphicon glyphicon-paperclip rcp-i-tag-margin-right-top"></div>
+                    <span>스크랩 <span>{{countScrap}}</span></span></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ entry-content -->
+            </div>
+            <!-- /.entry-inner -->
+          </div>
+        
+          </div>
+</div>
+{{/regStatus}}
+{{/each}}
+</script>
+
+
+  <script id="visitor-template" type="text/x-handlebars-template">
+  {{#each data}}
+    <div class="rcp-Vst" name="rcp-Vst">
+          <div class="rcp-Vst-top">            
+            <img class="rcp-Vst-img img-circle" src="img/profileImg/{{user.image}}" />            
+            <div class="rcp-Vst-common">
+            <span class="editBtn1" data-index="{{visitorNo}}">
+             <button type="button" class="btn btn-info btn-xs vstUpdateBtn" data-index="{{visitorNo}}">수정</button>
+            </span>
+            <span class="editBtn2" data-index="{{visitorNo}}">
+                <button type="button" class="btn btn-danger btn-xs vstDeleteBtn" name="vstDeleteBtn" data-index="{{visitorNo}}">삭제</button>
+            </span>  
+              <span class="rcp-Vst-vno"></span><br/>
+              <input type="hidden" class="fromNo" name="fromNo" value={{user.userNo}}>
+              <span id="rcp-Vst-id" class="rcp-Vst-id">From. {{user.userName}}
+              </span><br/>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              <span id="rcp-Vst-time">Date. {{visitorDate}}</span>
+            </div>
+          </div>
+          <div class="rcp-Vst-bottom vst-contents" id="vst-contents" data-index="{{visitorNo}}">
+            <div class="rcp-Vst-contents">
+              <p>{{visitorContent}}</p>
+            </div>
+          </div>
+            <div class="rcp-Vst-slotRp">
+              <!---->
+            </div>
+          </div>
+        </div>
+  {{/each}}
+  </script>
+  <script id="subscribe-recipe-template"
+    type="text/x-handlebars-template">
+ {{#each data}}
+   <div class="rcp-subscribe-detail">
+      <div class="rcp-subscribe-column">
+          <div class="rcp-left-div rcp-float-left-div">
+            <img class="rcp-subscribe-image" name="rcp-subscribe-images" src="../img/4.jpg">
+          </div>
+          <!-- <div id="triangle-left"></div> -->
+          <div class="rcp-right-div">
+          <a href="#" class="rcp-viewMore">더보기</a>
+            <div class="rcp-element-default-position">
+           
+               <div class="rcp-subscribe-recipe-profile">
+                <img class="rcp-subscribe-profile img-circle" src="../img/profile1.jpg"> 
+                <div class="rcp-subscribe-recipe-name">
+                <p class="rcp-subscribe-p-tag"><b>{{recipeName}}</b></p>
+                <h6 style="color:#9a9a9a">{{recipeDate}} 게시됨 </h6>
+                </div>
+                <p class="rcp-first-p-margin"> {{intro}}</p> 
+               </div> 
+               <div class="rcp-subscribe-preview">
+               <p class="rcp-subscribe-preview-p-tag">{{userName}}님의 최신 레시피</p>
+               <img class="rcp-subscribe-preview-image" src="../img/2.jpg">
+                <img class="rcp-subscribe-preview-image" src="../img/3.jpg">
+                 <img class="rcp-subscribe-preview-image" src="../img/4.jpg">
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  {{/each}}
+</script>
+  <script id="comRcpList-template" type="text/x-handlebars-template">
+ {{#each data}}
+
+<div class="rcp-subscribe-detail">
+      <div class="rcp-subscribe-column">
+          <div class="rcp-left-div rcp-float-left-div">
+            <img class="rcp-subscribe-image" name="rcp-subscribe-images" src="../img/3.jpg">
+          </div>
+          <!-- <div id="triangle-left"></div> -->
+          <div class="rcp-right-div">
+          <a href="#" class="rcp-viewMore">더보기</a>
+            <div class="rcp-element-default-position">
+           
+               <div class="rcp-subscribe-recipe-profile">
+                <img class="rcp-subscribe-profile img-circle" src="img/profileImg/{{user.image}}"> 
+                <div class="rcp-subscribe-recipe-name">
+                <p class="rcp-subscribe-p-tag"><b>{{recipeName}}</b></p>
+                <h6 style="color:#9a9a9a">{{recipeDate}} 게시됨 </h6>
+                </div>
+                <p class="rcp-first-p-margin">{{intro}}</p> 
+               </div> 
+               <div class="rcp-subscribe-preview">
+               <p class="rcp-subscribe-preview-p-tag">각종 정보 좋아요/스크랩/평점등등</p>
+               <img class="rcp-subscribe-preview-image" src="../img/2.jpg">
+                <img class="rcp-subscribe-preview-image" src="../img/3.jpg">
+                 <img class="rcp-subscribe-preview-image" src="../img/4.jpg">
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ {{/each}}
+  </script>
+  
+
+  <script id="recipe-detail-main-template"
+    type="text/x-handlebars-template">
+           <div class="rcp-body" name="rcp-body" >
+              <div>
+                <div class="rcp-title-size">
+                   
+                  <h6 class="rcp-bodyTitle">Main</h6>
+                    
+                </div>
+                <ul class="rcp-mainSlider">
+                  {{#each representImages}}
+                <li class="rcp-mainImg"><img class="rcp-images rcp-images-main rcp-mainImg1" src="img/representImg/{{this}}" class="rcp-images" name="rcp-images-position" id="rcp-images-position"></li>
+                    {{/each}}
+                </ul>
+               </div>
+               <div class="rcp-explanation" name="rcp-explanation">
+                  <p></p>
+                </div>
+            </div>
+
+</script>
+
+  <script id="recipe-detail-template" type="text/x-handlebars-template">
+    {{#recipeProcedure}}
+              <div class="rcp-body" name="rcp-body" >
+              <div>
+                <div class="rcp-title-size">
+                    
+                  <h6 class="rcp-bodyTitle">STEP{{inc @index}}</h6>
+                  {{#if recipeTime}}
+                    <button class="timerBtn" type="button"> 
+                      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      {{recipeTime}}분 타이머 시작!!
+                    </button>
+                    <div class="timerBtn padding_top_15px display_none"> 
+                      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      타이머 실행중!!
+                    </div>
+                    <input type="hidden" value="{{recipeTime}}"/>
+                  {{/if}}
+                  
+                </div>
+                <div>
+               
+                </div>
+               </div>
+                <img src="img/recipeImg/{{recipeProduceImage}}" class="rcp-images">
+               <div class="rcp-explanation" name="rcp-explanation">
+                  <p>{{recipeProduce}}</p>
+                </div>
+               <div class="rcp-nav-down">
+                   
+               </div>
+            </div>
+{{/recipeProcedure}}
+</script>
+
+  <script id="recipe-comment" type="text/x-handlebars-template">
+{{#each data}}
+<div class="cs-comments-area">           
+ <span class="rcp-comment-indexNum"></span> 
+                <article>
+                  
+                  <div class="cs-comment-author">
+                   <img class="avatar" src="img/profileImg/{{user.image}}" alt=""> 
+                      <b><a href="#">{{user.userName}}</a></b> 
+                          <a class="cs-comment-metadata" href="#"> 
+                         <span class="rcp-comment-date">{{recipeCommentDate}}</span>
+                    </a>
+                    <input type="hidden" id="commentNo" name="commentNo" value={{commentNo}}>
+                    {{#x-button}}
+                    <a href="#" id="deleteComment">✖</a>                     
+                    {{/x-button}}
+                  </div>
+                  <div class="cs-comment-content">
+                    <p>{{recipeComment}}</p>                    
+                  </div>
+                </article>   
+          </div>
+{{/each}}
+  </script>
+  <script id="recipe-detail-304-info-template"
+    type="text/x-handlebars-template">
+
+<div class="detail-images">
+<input type="hidden" class="rcp-hidden-userNo" value="{{data.userNo}}">
+<input type="hidden" class="rcp-hidden-recipeNo" value="{{data.recipeNo}}">
+<input type="hidden" class="rcp-hidden-email" value="{{data.user.email}}">
+
+<a href="#"><img src="img/profileImg/{{data.user.image}}" class="rcp-right-profile  rcp-profile img-circle"></a>
+<a class="rcp-nickname" href="#">{{data.user.userName}}</a>
+<h4 class="rcp-detail-title"></h4>
+<div align="center">
+<a href="#" class="rcp-detail-scrap">
+<div class="rcp-scrap-button-text rcp-scrap-button-text-margin" >
+<i class="glyphicon glyphicon-paperclip rcp-i-tag-margin-right-top"></i>  스크랩</div></a>
+</div>
+
+<a href="#" class="rcp-detail-like">
+<div class="rcp-scrap-button-text-like " name="">
+<i class="glyphicon glyphicon-heart-empty rcp-i-tag-margin-right-top" ></i>  좋아요</div></a>
+<div class="rcp-info-items">
+   <div class="rcp-icons">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   <i class="fa fa-heart" aria-hidden="true"></i>
+   <i class="fa fa-comments" aria-hidden="true"></i>
+   <i class="fa fa-external-link" aria-hidden="true"></i>
+   <i class="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div class="rcp-icons-names">
+    <p>조회수</p>
+    <p>좋아요</p>
+    <p>댓글</p>
+    <p>스크랩</p> 
+    <p>평점</p>
+  </div>
+  <div class="rcp-icons-info" align="right">
+    <p>{{data.hits}}</p>
+    <p>{{data.countLike}}</p>
+    <p>{{data.countComment}}</p>
+    <p>{{data.countScrap}}</p>
+    <p>{{data.gradePoint}}</p>  
+  </div>
+</div>
+<div class="rcp-info-filter">
+    <hr class="rcp-info-next"/>
+    
+</div>
+<div class="rcp-info-images">
+
+</div>
+<div class="rcp-detail-step">
+  </div>
+
+</div>
+</script>
+
+  <script id="recipe-detail-main-images-template"
+    type="text/x-handlebars-template">
+    <div class="rcp-main"> 
+      <a href="#" name="rcp-nav-images">MAIN</a>      
+    <a href="#" name="rcp-nav-bgImages-button" role="button" ><div style= "background-image:url('img/representImg/{{this}}')" class="rcp-info-images-emts"></div></a>
+</script>
+
+  <script id="recipe-detail-step-images-template"
+    type="text/x-handlebars-template">
+{{#recipeProcedure}}
+     <div class="rcp-main"> 
+      <a href="#" name="rcp-nav-images">STEP {{inc @index}}</a>
+      <div style="float:right">         
+      </div>
+     <a href="#" name="rcp-nav-bgImages-button" role="button" >
+      <div style= background-image:url("img/recipeImg/{{recipeProduceImage}}") class="rcp-info-images-emts"></div></a> 
+    </div>
+{{/recipeProcedure}}
+</script>
+
+  <script id="recipe-comment-addForm" type="text/x-handlebars-template">
+        <!-- <h2>Leave a Reply</h2> -->
+        <div id="respond" class="comment-respond clearfix">
+          <div class="grid-container">
+            
+              <input type="hidden" name="recipeNo" id="forCommentRecipeNumber" value="">
+              <div class="grid desk-12 alpha omega">
+                <div class="label">Comment</div>
+                <textarea name="recipeComment"></textarea>
+              </div>
+
+              <p class="form-submit clearfix">
+                <input name="rcp-submit" class="button primary" type="button" value="Post Comment" />                
+                <div class="form-allowed-tags" style="display: none;">
+                 
+                </div>
+              </p>
+              
+          
+          </div>
+        </div><!-- #respond -->
+</script>
+
+
+
+  <!-- 별점주기 -->
+  <script id="starrating-template" type="text/x-handlebars-template">
+    <div id="starrating-box">
+    <br/>  
+    {{#if checkDuplicateGrade}}
+      <div>
+        <span id="rcp-starrating" align="left">평가하기</span>
+        
+      </div>
+      <div class="rcp-rating">
+        <input id="star5" name="rating" type="radio" value="5"/>
+        <label for="star5" class="full"></label>
+        <input id="star4.5" name="rating" type="radio" value="4.5"/>
+        <label for="star4.5" class="half"></label>
+        <input id="star4" name="rating" type="radio" value="4"/>
+        <label for="star4" class="full"></label>
+        <input id="star3.5" name="rating" type="radio" value="3.5"/>
+        <label for="star3.5" class="half"></label>
+        <input id="star3" name="rating" type="radio" value="3"/>
+        <label for="star3" class="full"></label>
+        <input id="star2.5" name="rating" type="radio" value="2.5"/>
+        <label for="star2.5" class="half"></label>
+        <input id="star2" name="rating" type="radio" value="2"/>
+        <label for="star2" class="full"></label>
+        <input id="star1.5"  name="rating" type="radio" value="1.5"/>
+        <label for="star1.5" class="half"></label>
+        <input id="star1"  name="rating" type="radio" value="1"/>
+        <label for="star1" class="full"></label>
+        <input id="star0.5"  name="rating" type="radio" value="0.5"/>
+        <label for="star0.5" class="half"></label>
+      </div>
+      <div id="rcp-starrating-btn-apply" class="rcp-starrating-btn">
+        등록 </div>
+    {{else}}
+      <div align="left">평가하기</div>      
+      <div align="left">참여하셨습니다.</div>
+    {{/if}}
+    </div>
+  </script>
+  
+  
+  <!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->
+  
+  
+  <!-- 
+  <script>
+$(window).scroll(function() { 
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+      rcpListScrollAppend();
+    }
+      /* 준모3 */
+});
+</script>
+
+  <script>
+    function rcpListScrollAppend() {
+      var userNo = 0;
+      var a = eval(sessionStorage.getItem('data'));
+      if (a != null) {
+        userNo = eval(sessionStorage.getItem('data'))[0].userNo;
+      }
+      if (isNaN(parseInt($('#rcpList-pageNo').val()) + 1)) {
+        return;
+      }
+      var source = $('#comRcpList-template').text();
+      var template = Handlebars.compile(source);
+    }
+  </script>
+ -->  
+  <!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->
+  <script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+  <!-- ------------------디테일 일시적 추가   - 변경 할 것임 ---------------------- -->
+    
+  <script src="js/mypage.js"></script>
+  <script src="js/template/plugin.js"></script>
+  <script src="js/template/custom.js"></script>
+
+  <script src="js/rcp-template/theme.js"></script>
+  <script src="js/rcp-template/login-form.js"></script>
+</body>
+</html>
