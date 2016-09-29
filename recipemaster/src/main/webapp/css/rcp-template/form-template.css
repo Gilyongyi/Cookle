@@ -1,0 +1,133 @@
+/* #login-pop-up-banner html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} */
+
+.inset {
+	position: relative;
+	background: #fff;
+	padding: 3em 3em;
+	border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+}
+
+.inset label{
+	margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.form-template {
+	padding: 9px;
+	width: 95% !important;
+	font-size: 1.1em;
+	margin-top: 5px;
+	border: 2px solid #EAEEF1;
+	color: #666666;
+	background: #EAEEF1;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	margin-left: 5px;
+	outline: none;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.form-template:hover, .userEmail {
+	background: #fff;
+	border: 2px solid #609EC3;
+	outline: none;
+}
+
+.template-form span {
+	display: block;
+	font-size: 1em;
+	color: #787878;
+	padding-bottom: 5px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.submit {
+	padding: 2px 2px;
+	float: left;
+	margin-right: 11px;
+}
+
+.submit input[type="submit"] {
+	background: #F06B37;
+	border: none;
+	outline: none;
+	padding: 0.55em 1.3em 0.6em;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	font-size: 0.9em;
+	border-radius: 1.3em;
+	-webkit-border-radius: 1.3em;
+	-moz-border-radius: 1.3em;
+	-o-border-radius: 1.3em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+}
+
+.forget-pass a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	float: right;
+	color: #898888;
+	font-size: 0.95em;
+	margin-top: 13px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sign {
+	padding: 10px 0;
+  height: 60px;
+}
+
+.find-password-btn-position{
+	float: none !important;
+	position: relative;
+	left: 27%;
+}
+
+.find-password-btn{
+  width: 45%;
+  padding: 0;
+}
+
+#login-pop-up-banner{
+  width:32%;
+  display: none;
+}

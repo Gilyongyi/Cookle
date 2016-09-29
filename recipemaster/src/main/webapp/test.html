@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="text" id="search">
+<button id="btn">전송전송</button>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!-- <script src="js/template/elasticsearch-js/elasticsearch.min.js"></script> -->
+<script src="js/template/elasticsearch-js/elasticsearch.jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var client = new $.es.Client({
+		  hosts: 'localhost:9200'
+		});
+	
+	$('#search').on('keyup', function(){
+		var datas = {
+				  query:{
+					    multi_match: {
+					    query:$(this).val(),
+					      fields: ["recipeName", "Materials", "userName"]
+					    }
+					  }
+					,
+					from: 0,
+					size: 4
+			};  
+		
+		$.ajax({
+		    url : 'http://localhost:9200/_msearch',
+		    method : 'POST',
+		    data : JSON.stringify(datas),
+		    dataType : 'json',
+		    crossDomain: true,
+		    success : function(result) {
+		    	var dataArray = new Array();
+		    	$.each(result.hits.hits, function(index, data){
+		    		dataArray.push(data._source);
+		    	});
+		    	var resultData = {
+		                data:dataArray
+		            }
+		    	console.log(test);
+		    },
+		    error : function() {
+		        alert('에러에러')
+		    }
+	  });
+	});
+});
+</script>
+</html>

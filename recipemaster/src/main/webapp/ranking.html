@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="sticky-header-negative sticky-header-active">
+<head>
+<meta charset="UTF-8">
+<title>ranking</title>
+
+<link rel="stylesheet"
+	href="css/rcp-template/naver-kin_default_margin.css">
+<link rel="stylesheet" href="css/rcp-template/naver-hall.css">
+
+<link rel="stylesheet" href="css/rcp-template/animate.css">
+<link rel="stylesheet" href="css/rcp-template/theme.css">
+<link rel="stylesheet" href="css/rcp-template/theme-element.css">
+<link rel="stylesheet" href="css/rcp-template/theme-animate.css">
+<link rel="stylesheet" href="css/rcp-template/skin-restaurant.css">
+
+<link rel="stylesheet"
+	href="js/template/jquery-ui-1.12.0/jquery-ui.min.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/node_modules/sweetalert/dist/sweetalert.css">
+<link rel="stylesheet"
+	href="node_modules/bxslider/dist/jquery.bxslider.css">
+<link rel="stylesheet" href="css/template/animate.css">
+<link rel="stylesheet" href="css/template/main.css">
+<link rel="stylesheet" href="css/template/plugins.css">
+<link rel="stylesheet" href="css/rcp-template/ranking.css">
+<link rel="stylesheet" href="css/template/styles.css">
+
+<link rel="stylesheet" href="css/updateImg.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/userinfobox.css">
+<link rel="stylesheet" href="css/common/signup.css">
+<script src="js/common/app-context.js"></script>
+<style>
+</style>
+</head>
+<body data-spy="scroll" data-target="#navSecondary" data-offset="170">
+
+	<header id="header" class="header-narrow site-header wide"
+		role="banner"
+		data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+
+		<div class="header-body"></div>
+
+	</header>
+
+
+	<section class="p-xlg rcp-p-xlg-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 center">
+					<h2 class="mt-lg mb-sm">
+						For your <strong>Ranking</strong>
+					</h2>
+					<p class="font-size-md">
+						Chef Ranking : 레시피 1개 = 10점 / 구독자수 1명 = 5점<br>
+						Recipe Ranking : 좋아요 1개 = 3점 / 스크랩 1개 = 3점 / 조회수 1개 = 1점
+					</p>
+
+					<hr class="custom-divider">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="content">
+		<div class="section_ranking grid_inner _cheerUpArea">
+			<div class="uio_top"></div>
+			<div class="section_adoption _eliteUserArea">
+				<div class="article_list">
+					<div class="rankingWrapper">
+					  <div><h3 class="bxrank">전체 인기 Chef</h3><ul class="top_list wrapper-chefs"></ul></div>
+						<div><h3 class="bxrank">이달의 인기 Chef</h3><ul class="top_list" id="rcp-chef-rank-month"></ul></div>
+						<div><h3 class="bxrank">오늘의 인기 Chef</h3><ul class="top_list" id="rcp-chef-rank-today"></ul></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="rcp-ranking-middle-background">
+		<div class="rcp-profileCover"></div>
+	</section>
+
+	<section class="rcp-ranking">
+		<div class="content">
+			<span class="ranking-topName">Chef Ranking</span>
+			<div class="rcp-ranking-form">
+				<div class="rcp-user-ranking-content">
+					<div class="col-sm-1 rcp-ranking-position">
+						<p class="rcp-ranking-text-left">순위</p>
+					</div>
+					<div class="col-sm-3 rcp-ranking-position">
+						<!--   <div class="rcp-ranking-image">
+          </div> -->
+						<p class="rcp-ranking-text-left">쉐프</p>
+
+
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2 rcp-ranking-position">
+						<p class="rcp-ranking-text-center">레시피 수</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position">
+						<p class="rcp-ranking-text-center">구독자 수</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position ">
+						<p class="rcp-ranking-text-center">토탈포인트</p>
+					</div>
+					<div class="col-sm-1"></div>
+
+				</div>
+
+				<!-- 핸들바스 만들 소스 시작부분 -->
+				<!-- userRanking -->
+				<div id="chefRanking"></div>
+				<!-- 핸들바스 만들 소스 끝부분  -->
+			</div>
+		</div>
+
+	</section>
+
+	<section class="rcp-ranking">
+		<div class="content">
+			<span class="ranking-topName">Recipe Ranking</span>
+			<div class="rcp-ranking-form">
+				<div class="rcp-user-ranking-content">
+					<div class="col-sm-1 rcp-ranking-position">
+						<p class="rcp-ranking-text-left">순위</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position">
+						<p class="rcp-ranking-text-left">레시피</p>
+
+
+					</div>
+					<div class="col-sm-1"></div>
+					<div class="col-sm-2 rcp-ranking-position">
+						<p class="rcp-ranking-text-center">좋아요 수</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position">
+						<p class="rcp-ranking-text-center">스크랩 수</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position ">
+						<p class="rcp-ranking-text-center">조회수</p>
+					</div>
+					<div class="col-sm-2 rcp-ranking-position ">
+						<p class="rcp-ranking-text-center">토탈포인트</p>
+					</div>
+
+				</div>
+
+				<!-- 핸들바스 만들 소스 시작부분 -->
+				<!-- recipeRanking -->
+				<div id="recipeRanking"></div>
+				<!-- 핸들바스 만들 소스 끝부분  -->
+			</div>
+		</div>
+
+	</section>
+	<!-- js -->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/template/jquery-ui-1.12.0/jquery-ui.min.js"></script>
+	<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+	<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+
+	<script src="js/rankingpage.js"></script>
+	<script src="js/common.js"></script>
+
+	<script id="main-chefRanking" type="text/x-handlebars-tmeplate">
+{{#each data}}
+        {{#if @first}}    
+          <li class="list_divide first">
+            <div class="list_item top_item1">
+        {{else if @last}}    
+          <li class="list_divide last">
+           <div class="list_item top_item3">
+        {{else}}   
+          <li class="list_divide">
+            <div class="list_item top_item2">
+        {{/if}}
+                  <span class="rank"><em></em></span>
+                  <div class="thmb_profile">
+                    <div class="thmb">
+                      <img src="img/profileImg/{{image}}" alt=""> <span
+                        class="mask"></span>
+                    </div>
+                  </div>
+                  <div class="list_body">
+                    <div class="writer_sec">
+                      <span class="writer no_badge"><em class="ellipsis">{{userName}}</em></span>
+                    </div>
+                    <p class="desc ellipsis">{{intro}}</p>
+                  </div>
+              </div>
+              <div class="list_side">
+
+                <div class="recommend ">
+              <button class="_cheerUp _param('longzhe1983')" onclick="nhn.Kin.Utility.nClicks('hfh.kglike', '', '', event);">
+                <input type="hidden" class="rcp-hidden-email" value="{{email}}">  
+              <span class="num _count rcp-userName">페이지로이동</span>
+              </button>
+            </div>
+              </div>
+            </li>
+{{/each}}
+</script>
+	<script id="chef-card-template" type="text/x-handlebars-tmeplate">
+{{#each data}}
+        {{#if @first}}    
+          <li class="list_divide first">
+            <div class="list_item top_item1">
+        {{else if @last}}    
+          <li class="list_divide last">
+           <div class="list_item top_item3">
+        {{else}}   
+          <li class="list_divide">
+            <div class="list_item top_item2">
+        {{/if}}
+                  <span class="rank"><em></em></span>
+                  <div class="thmb_profile">
+                    <div class="thmb">
+                      <img src="img/profileImg/{{image}}" alt=""> <span
+                        class="mask"></span>
+                    </div>
+                  </div>
+                  <div class="list_body">
+                    <div class="writer_sec">
+                      <span class="writer no_badge"><em class="ellipsis">{{userName}}</em></span>
+                    </div>
+                    <p class="desc ellipsis">{{intro}}</p>
+                  </div>
+              </div>
+              <div class="list_side">
+
+                <div class="recommend ">
+              <button class="_cheerUp _param('longzhe1983')" onclick="nhn.Kin.Utility.nClicks('hfh.kglike', '', '', event);">
+                <input type="hidden" class="rcp-hidden-email" value="{{email}}">  
+              <span class="num _count rcp-userName">페이지로이동</span>
+              </button>
+            </div>
+              </div>
+            </li>
+{{/each}}
+</script>
+	<script id="chef-card-template" type="text/x-handlebars-tmeplate">
+{{#each data}}
+        {{#if @first}}    
+          <li class="list_divide first">
+            <div class="list_item top_item1">
+        {{else if @last}}    
+          <li class="list_divide last">
+           <div class="list_item top_item3">
+        {{else}}   
+          <li class="list_divide">
+            <div class="list_item top_item2">
+        {{/if}}
+                  <span class="rank"><em></em></span>
+                  <div class="thmb_profile">
+                    <div class="thmb">
+                      <img src="img/profileImg/{{image}}" alt=""> <span
+                        class="mask"></span>
+                    </div>
+                  </div>
+                  <div class="list_body">
+                    <div class="writer_sec">
+                      <span class="writer no_badge"><em class="ellipsis">{{userName}}</em></span>
+                    </div>
+                    <p class="desc ellipsis">{{intro}}</p>
+                  </div>
+              </div>
+              <div class="list_side">
+
+                <div class="recommend ">
+              <button class="_cheerUp _param('longzhe1983')" onclick="nhn.Kin.Utility.nClicks('hfh.kglike', '', '', event);">
+                <input type="hidden" class="rcp-hidden-email" value="{{email}}">  
+              <span class="num _count rcp-userName">페이지로이동</span>
+              </button>
+            </div>
+              </div>
+            </li>
+{{/each}}
+</script>
+
+
+	<script id="chef-rank-template" type="text/x-handlebars-template"> 
+  {{#each data}}
+  <div class="rcp-user-ranking rcp-ranking-position">
+  <div class="col-sm-1">
+    <p class="rcp-ranking-num">{{rownum}}</p>
+  </div>          
+    <div class="col-sm-3">
+    <img src="img/profileImg/{{image}}" class="rcp-ranking-image">
+     <input type="hidden" class="rcp-hidden-email" value="{{email}}">
+    <h5 class="rcp-ranking-userName rcp-userName">{{userName}}</h5>
+    <h5 class="rcp-ranking-chef-rank">{{grade}}</h5>
+  </div>
+      <div class="col-sm-2"></div>
+  <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9">{{recipeCount}}</div>
+   <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9">{{subsCount}}</div>
+    <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9"><p>{{totalPoint}}</p></div>
+     <div class="col-sm-1"></div>
+</div>
+  {{/each}}
+  </script>
+
+	<script id="recipe-rank-template" type="text/x-handlebars-tmeplate">
+{{#each data}}
+<div class="rcp-recipe-ranking rcp-ranking-position">
+  <div class="col-sm-1">
+    <p class="rcp-ranking-num">{{rownum}}</p>
+  </div>          
+    <div class="col-sm-2">
+    <h5 class="rcp-ranking-recipeName">{{recipeName}}</h5>
+  </div>
+      <div class="col-sm-1"></div>
+  <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9">{{countLike}}</div>
+   <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9">{{countScrap}}</div>
+    <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9"><p>{{hits}}</p></div>
+    <div class="col-sm-2 rcp-ranking-text-center rcp-rcnking-top-9"><p>{{totalPoint}}</p></div>
+     
+</div>
+{{/each}}
+</script>
+
+	<script>
+	$(function(){
+		  $('.header-body').load('topNavBar.html');
+		})
+
+	</script>
+
+</body>
+</html>

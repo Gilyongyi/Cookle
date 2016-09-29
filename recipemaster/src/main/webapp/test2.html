@@ -1,0 +1,73 @@
+<html>
+<head>
+ 
+    <title></title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/template/jquery.countdown.min.js"></script>  
+</head>
+<body>
+    <b>Send message</b><p>
+    id  <input type="text" id="userid"/><br/>
+    Message  <input type="text" id="msgbox"/>
+    <br>
+    <span id="msgs"></span>
+    <script type="text/javascript">
+    $(function(){
+    	var $this = $(this);
+        var node = $('<div class="timerObj"/>');
+        var clock = $('<div class="timerClock float_left"></div>'); 
+        
+        clock.countdown(getTimeStamp($this.next().next().val()))
+        .on('update.countdown', function(event) {
+          var format = '%H:%M:%S';
+          $(this).html(event.strftime(format));
+        })
+        .on('finish.countdown', function(event) {
+          $(this).html('00:00:00').parent().css("color", "red")
+          $this.removeClass('display_none');
+          $this.next().addClass('display_none');
+          var audio = document.createElement('audio');
+          audio.src = 'audio/porori.mp3'
+            audio.play();
+        });
+
+        node.append($('<span class="float_left">'+$this.prev().text()+' -&nbsp;<span>'));
+        node.append(clock);
+
+        $('.timerZone').append(node);
+        $this.addClass('display_none');
+        $this.next().removeClass('display_none');
+    });
+
+    function getTimeStamp(time) {
+      var d = addMinutes(new Date(), time);
+      var s =
+        leadingZeros(d.getFullYear(), 4) + '/' +
+        leadingZeros(d.getMonth() + 1, 2) + '/' +
+        leadingZeros(d.getDate(), 2) + ' ' +
+
+        leadingZeros(d.getHours(), 2) + ':' +
+        leadingZeros(d.getMinutes(), 2) + ':' +
+        leadingZeros(d.getSeconds(), 2);
+
+      return s;
+    }
+
+    function addMinutes(date, minutes) {
+      return new Date(date.getTime() + minutes*60000);
+    }
+
+    function leadingZeros(n, digits) {
+      var zero = '';
+      n = n.toString();
+
+      if (n.length < digits) {
+        for (i = 0; i < digits - n.length; i++)
+          zero += '0';
+      }
+      return zero + n;
+    }
+        
+    </script>
+</body>
+</html>

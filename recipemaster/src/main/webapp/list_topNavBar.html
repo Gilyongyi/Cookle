@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/rcp-template/theme.css">
+<link rel="stylesheet" href="css/rcp-template/theme-animate.css">
+<link rel="stylesheet" href="css/rcp-template/layer.css">
+<link rel="stylesheet" href="css/rcp-template/login.css">
+<link rel="stylesheet" href="css/rcp-template/skin-restaurant.css">
+<link rel="stylesheet" href="css/rcp-template/form-template.css">
+</head>
+<body data-spy="scroll" data-target="#navSecondary" data-offset="170">
+
+
+<div id="login-pop-up-banner" style="display: none; width: 393px;
+  ">
+    <div class="inset">
+      <!-----start-main---->
+      <form class="template-form">
+        <div>
+          <span><label>Email</label></span> <span><input type="text"
+            class="form-template userEmail" id="userEmail"></span>
+        </div>
+        <div>
+          <span><label>Password</label></span> <span><input
+            id="userPassword" type="password" class="form-template"></span>
+        </div>
+        <div class="sign">
+          <div class="submit">
+            <input id="userLogin" type="submit" value="LOGIN">
+          </div>
+          <span class="forget-pass"> <a id="findPassword" href="#">Forgot
+              Password?</a>
+          </span>
+          <div class="clear"></div>
+        </div>
+      </form>
+      <div id="naver_id_login" class="display_none"></div>
+    </div>
+  </div>
+
+  <div id="findPassword-pop-up-banner" style="display: none;">
+    <div class="inset">
+      <!-----start-main---->
+      <form class="template-form">
+        <div>
+          <span><label>Email</label></span> <span><input type="text"
+            class="form-template userEmail" id="findPassword-userEmail"></span>
+        </div>
+        <div class="sign">
+          <div class="submit find-password-btn-position">
+            <input id="pushEmail" class="find-password-btn" type="submit"
+              value="Email 전송">
+          </div>
+          <div class="clear"></div>
+        </div>
+      </form>
+      <div id="naver_id_login" class="display_none"></div>
+    </div>
+  </div>
+
+  <div id="signup-pop-up-banner" style="display: none;">
+    <div class="inset">
+      <!-----start-main---->
+      <form class="template-form">
+        <div>
+          <span><label>Email</label></span> <span><input type="text"
+            class="form-template userEmail" id="signup-e-mail"></span>
+        </div>
+        <label id="signup-e-mail-label" class="control-label sign-label"></label>
+        <div>
+          <span><label>Name</label></span> <span><input
+            id="signup-userName" type="text" class="form-template"></span>
+        </div>
+        <label id="signup-userName-label" class="control-label sign-label"></label>
+        <div>
+          <span><label>Password</label></span> <span><input
+            id="signup-password" type="password" class="form-template"></span>
+        </div>
+        <label id="signup-password-label" class="control-label sign-label"></label>
+        <div>
+          <span><label>Password Confirm</label></span> <span><input
+            id="signup-passwordCheck" type="password" class="form-template"></span>
+        </div>
+        <label id="signup-passwordCheck-label"
+          class="control-label sign-label"></label>
+        <div class="sign">
+          <div class="submit find-password-btn-position">
+            <input id="signup-addBtn" class="find-password-btn" type="submit"
+              value="Sign up">
+          </div>
+        </div>
+      </form>
+      <div id="naver_id_login" class="display_none"></div>
+    </div>
+  </div>
+
+
+	<div class="header-container container">
+		<div class="header-row">
+			<div class="header-column">
+				<div class="header-logo">
+					<a href="index.html"> <img id="rcp-top-bar-logo" alt="Porto"
+						width="164" height="55" src="img/logo-restaurant.png">
+					</a>
+				</div>
+				<div class="float_left"
+					style="height: 100%; vertical-align: middle; margin: 15px">
+					<div class="searchWrapper">
+						<span id="searcIcon" class="glyphicon glyphicon-search"
+							aria-hidden="true"></span> <input type="text" id="searchKeyword"
+							placeholder="recipe 이름, 쉐프명, 재료">
+					</div>
+				</div>
+			</div>
+			<div class="header-column">
+				<div class="header-row">
+					<div class="header-nav">
+						<div
+							class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse" style="visibility:visible; ">
+							<nav>
+								<ul class="nav nav-pills" id="mainNav">
+									<!-- <li class="activedropdown-full-color dropdown-secondary">
+                            <a href="#">
+                              Home
+                            </a>
+                          </li> -->
+									<li id="loginBtn"
+										class="activedropdown-full-color dropdown-secondary"><a
+										href="#"> Sign In </a></li>
+									<li id="signUpBtn"
+										class="dropdown-full-color dropdown-secondary"><a
+										href="#"> Sign Up </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/template/naverLogin_implicit-1.0.2.js"></script>
+	<script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+	<!-- <script src="js/list_recipeSearch.js"></script> -->
+	
+	<script type="text/javascript">
+
+		$(function(){
+			var userInfo = getUserInfo();
+			
+			urlParams = getUrlParams();  
+			  if(urlParams.sk != undefined){    
+			    $('#searchKeyword').val(decodeURIComponent(urlParams.sk));
+			    $('#more-rcp-list').val('');
+			  } 
+			  
+			  if($('#more-rcp-list').val().length>0){
+				    search($('#sort-condition').val(),'desc')
+				  } else {
+				    esearch($('#sort-condition').val(), 1, false);
+				  }
+			
+			//loginBtn 팝업 , 불투명 배경 띄우기
+			$('#loginBtn').on('click', function(event){
+			  event.preventDefault();
+			  $('#login-pop-up-banner').bPopup({
+			    onClose:function(){
+			      $('#userEmail').val('');
+			      $('#userPassword').val('');
+			    }
+			  });
+			});
+
+			//스크롤 내리면 생기는 loginBtn 팝업 , 불투명 배경 띄우기
+			$('#topLoginBtn').on('click', function(event){
+			  event.preventDefault();
+			  $('#login-pop-up-banner').bPopup({
+			    onClose:function(){
+			      $('#userEmail').val('');
+			      $('#userPassword').val('');
+			    }
+			  });
+			});
+			
+
+			//signUpBtn 팝업 , 불투명 배경 띄우기
+			$('#signUpBtn').on('click', function(event){
+			  event.preventDefault();
+			  $('#signup-pop-up-banner').bPopup({
+			    onClose:function(){
+			      $('#signup-e-mail').val('');
+			      $('#signup-userName').val('');
+			      $('#signup-password').val('');
+			      $('#signup-passwordCheck').val('');
+			      $('#signup-e-mail-label').text('');
+			      $('#signup-userName-label').text('');     
+			      $('#signup-password-label').text('');
+			      $('#signup-passwordCheck-label').text('');
+			    }
+			  });
+			});
+
+			//스크롤 내리면 생기는 signUpBtn 팝업 , 불투명 배경 띄우기
+			$('#signUpTopBtn').on('click', function(event){
+			  event.preventDefault();
+			  $('#signup-pop-up-banner').bPopup({
+			    onClose:function(){
+			      $('#signup-e-mail').val('');
+			      $('#signup-userName').val('');
+			      $('#signup-password').val('');
+			      $('#signup-passwordCheck').val('');
+			      $('#signup-e-mail-label').text('');
+			      $('#signup-userName-label').text('');     
+			      $('#signup-password-label').text('');
+			      $('#signup-passwordCheck-label').text('');
+			    }
+			  });
+			});
+			
+			$('#searchKeyword').on('focus',function(){
+			    $('#searchKeyword').css('transition', '0.2s');
+			    $('.searchWrapper').css('border-color', '#E09B23');
+			    $('.searchWrapper').css('color', '#E09B23');
+			    $('#searchKeyword').css('width', '230px');
+			  });
+	
+			  $('#searchKeyword').on('focusout', function(){
+			    $('#searchKeyword').css('transition', '0.2s');
+			    $('.searchWrapper').css('border-color', '#acacac');
+			    $('.searchWrapper').css('color', '#acacac');
+			    $('#searchKeyword').css('width', '180px');
+			  });
+		});	
+	</script>	
+	
+	<script type="text/javascript">
+		var naver_id_login = new naver_id_login("oZ3ZBiNctenY6ix5st7G",
+	    contextRoot+"index.html");
+		var state = naver_id_login.getUniqState();
+		naver_id_login.setButton("green", 3, 40);
+		naver_id_login.setDomain(".service.com");
+		naver_id_login.setState(state);
+		naver_id_login.init_naver_id_login();
+		
+		  // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
+		  function naverSignInCallback() {
+		    // naver_id_login.getProfileData('프로파일항목명');
+		    // 프로필 항목은 개발가이드를 참고하시기 바랍니다.
+		    console.log("nickName : "
+		        + naver_id_login.getProfileData('nickname'));
+		    console.log("email : " + naver_id_login.getProfileData('email'));
+		    $
+		        .ajax({
+		          url : '/user/loginNaver.json',
+		          method : 'post',
+		          dataType : 'json',
+		          data : {
+		            userName : naver_id_login
+		                .getProfileData('nickname'),
+		            email : naver_id_login.getProfileData('email')
+		          },
+		          success : function(result) {
+		            if (result.status == 'failure') {
+		
+		              swal('잘못입력하셨습니다.', '아이디 또는 비밀번호를 다시 확인하여 주세요.',
+		                  "error");
+		
+		              return;
+		            }
+		
+		            if (result.status == 'success') {
+		
+		            } else {
+		              swal('비밀번호를 다시 입력해주세요');
+		            }
+		
+		          },
+		          error : function() {
+		            swal('서버 요청 오류');
+		          }
+		        }); /* end of ajax */
+		  }
+		
+		  // 네이버 사용자 프로필 조회
+		  naver_id_login.get_naver_userprofile("naverSignInCallback()"); 	
+	</script>
+</body>
+</html>

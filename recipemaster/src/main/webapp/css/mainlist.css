@@ -1,0 +1,974 @@
+@CHARSET "UTF-8";
+/* ----------------styles.css copy------------ */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.bg-text{
+    position: relative;
+    top: 320px;
+    color: white;
+    left: 250px;
+    font-size: 6em;
+    font-family: 'Niconne', cursive;
+}
+
+.rcp-background-text h1 {
+	margin-bottom: 11px ! important;
+}
+
+.bg-p-text {
+	position: relative;
+	top: 320px;
+	color: white;
+	left: 250px;
+	font-size: 20px;
+}
+
+*>#main-list {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.More {
+	cursor: pointer;
+}
+
+.ht-section {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-size: cover;
+	position: relative;
+}
+
+.rcp-h2-25px {
+	color: black;
+	    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.rcp-mypage-section {
+	height: 310px;
+	margin-bottom: 30px;
+}
+
+.foo-wrapper {
+	font-size: 7.5px;
+}
+
+/* 
+.rcp-detail-body{
+	transform: translate3d(0px, 0px, 0px) ! important; 
+} 
+ */
+.hs-recipes.grid .entry .entry-action span {
+	display: block;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	position: relative;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.hs-recipes.grid .entry .entry-action a {
+	line-height: 34px;
+	padding: 0 12px;
+	background: #fff;
+	color: #656565;
+	display: inline-block;
+	margin: 5px 0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border: 1px dashed transparent;
+}
+/* 
+.hs-recipes.grid .entry .entry-action a:hover {
+	background: #f8a631;
+	color: #fff;
+	border-color: #fff;
+} */
+.entry-inner:hover .entry-action span:first-child {
+	top: 0;
+}
+
+.entry-inner:hover .entry-action span:last-child {
+	bottom: 0;
+}
+
+@media ( min-width : 768px and max-width:991px) {
+	.hs-content .container {
+		width: 750px;
+	}
+}
+
+.hs-content .container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.hs-recipes .isotope-grid {
+	-webkit-transition: height 1s;
+	-o-transition: height 1s;
+	transition: height 1s;
+}
+
+.hs-recipes.grid .entry .entry-media {
+	position: relative;
+	/* width: 283px; */
+	height: 160px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.rcp-mypage-section .entry {
+	/* line-height: 30px; */
+	/* margin-bottom: 30px; */
+	/* margin-bottom: 30px; */
+	/* width: 283px; */
+	/* 	margin-right: 10px;
+	margin-left: 10px; */
+	float: left;
+}
+
+.hs-recipes.grid .entry .entry-action {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hs-recipes.grid .entry .entry-action .entry-action-inner {
+	position: absolute;
+	top: 50%;
+	margin-top: -45px;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	text-align: center;
+}
+
+.hs-recipes.grid .entry .entry-action a {
+	line-height: 34px;
+	padding: 0 12px;
+	background: #fff;
+	color: #656565;
+	display: inline-block;
+	margin: 5px 0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border: 1px dashed transparent;
+}
+
+.hs-recipes.grid .entry .content-wrapper {
+	padding: 15px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 0;
+}
+
+.hs-recipes.grid .entry .entry-name {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 15px;
+	margin: 0;
+}
+
+.hs-recipes.grid .entry .entry-author {
+	color: #acacac;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 0;
+	line-height: 12px;
+}
+
+.hs-recipes.grid .entry .entry-meta {
+	overflow: hidden;
+	margin: 15px 0;
+	color: #acacac;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+/* --------------------styles.css copy end------------------ */
+#detail_pop_up {
+	top: 2% ! important;
+}
+
+.rcp-cookTime .active {
+	color: #337ab7;
+}
+
+.rcp-count-images {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 50px;
+	text-align: center;
+	color: white !important;
+	float: left;
+	margin-right: 10px;
+	padding-top: 4px;
+	height: 25px;
+	vertical-align: middle;
+	position: absolute;
+	z-index: 100;
+}
+
+.rcp-count-images-bg {
+	position: relative;
+	z-index: 1;
+	float: left;
+	background-color: black;
+	opacity: 0.5;
+	width: 58px;
+	height: 25px;
+	cursor: auto;
+}
+/*   .row{
+ margin-left: -7.5px ! important;
+ margin-right: -7.5px ! important; 
+ } */
+/* .rcp-mypage-section .entry, .hs-recipes.grid .we {
+	margin-left: 0px ! important;
+} */
+.active {
+	border-bottom: 0px solid #ecf0f1 !important;
+}
+
+.rcp-image-scale img.image1 {
+	width: 100%;
+	left: 50%;
+	top: 50%;
+}
+
+@media ( max-width :1023px) {
+	.rcp-image-scale {
+		width: 100%;
+		height: 141px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 350px;
+	}
+	.rcp-1024 {
+		width: 1024px;
+		margin: 0 auto;
+		padding: 0px;
+	}
+	.rcp-container {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.rcp-comment {
+		height: 67.9px;
+	}
+	.rcp-240 {
+		width: 240px;
+		margin: 0 auto;
+	}
+	.rcp-margin-left {
+		margin-left: 60px;
+	}
+	.rcp-margin-right {
+		margin-right: 60px;
+	}
+	.rcp-margin-top {
+		margin-top: 10px;
+	}
+	.rcp-margin-bottom {
+		margin-bottom: 10px;
+	}
+	.rcp-list-margin {
+		/* margin-left:25px; */
+		padding: 0px;
+	}
+	.rcp-list {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+	.rcp-listPosition {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	/* .rcp-relative {
+		margin-top: 5px;
+		position: relative;
+		height: 50pt;
+	} */
+	.rcp-profile-position {
+		position: absolute;
+		margin-top: 105px;
+		left: 30px;
+	}
+	.rcp-profile {
+		width: 48px;
+		border: 1px solid #aaaaaa;
+		left: 7%;
+	}
+	.thumbnail a .rcp-profile {
+		height: 48px ! important;
+	}
+	.rcp-caption {
+		margin-top: 3%;
+	}
+	.rcp-images {
+		width: 67px;
+		height: 67px;
+	}
+	.rcp-Grade {
+		position: relative;
+	}
+	.rcp-recipeGrade {
+		text-align: center;
+	}
+	.rcp-left-slideButton {
+		position: absolute;
+		left: 5%;
+		top: 50%;
+		z-index: 100;
+	}
+	.rcp-right-slideButton {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		z-index: 100;
+	}
+	.rcp-left_position {
+		
+	}
+	.rcp-comment {
+		text-align: center;
+		height: 67.97px;
+	}
+	.rcp-right-condiment {
+		text-align: left;
+		padding-left: 10%;
+	}
+	.item col-* {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.rcp-left-condiment {
+		text-align: right;
+		padding-right: 10%;
+	}
+	.rcp-buttons {
+		margin-bottom: 0px;
+	}
+	.rcp-cookTime {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		border: 1px solid #dddddd;
+		font-size: 0.8em;
+	}
+	.rcp-list .row {
+		margin: 0 auto;
+	}
+	.thumbnail {
+		width: 240px;
+		padding: 0px;
+		margin: 0 auto;
+	}
+	.rcp-list h3 {
+		font-size: 1em;
+		margin-top: 1em;
+		margin-bottom: 0.8em;
+	}
+	.rcp-list h4 {
+		width: 100%;
+		font-size: 12pt;
+		font-weight: bold;
+	}
+	.rcp-height30 {
+		height: 60pt;
+		margin-top: 10px;
+		padding-left: 10%;
+	}
+	.rcp-list h5 {
+		margin-top: 6px;
+		font-size: 9pt;
+	}
+	.rcp-list p {
+		font-size: 8pt;
+		margin-bottom: 0.05em;
+	}
+	.rcp-bottom {
+		height: 15px;
+	}
+	.rcp-list rcp-listSize {
+		width: 238px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	@media ( min-width : 1024px) {
+		.rcp-list .visible-lg {
+			display: block !important;
+		}
+	}
+	@media ( min-width : 768px) {
+		.rcp-list .visible-md {
+			display: block !important;
+		}
+		.rcp-list .rcp-1024 {
+			display: inline-block;
+			right: 50px;
+		}
+	}
+	.rcp-list {
+		margin-left: 9%;
+	}
+	@media ( min-width :950px) and (max-width:1023px) {
+		.rcp-list {
+			margin-left: 13%;
+		}
+	}
+	@media ( max-width :950px) {
+		.rcp-list {
+			margin-left: 8%;
+		}
+	}
+	@media ( max-width :900px) {
+		.rcp-list {
+			margin-left: 6%;
+		}
+	}
+	@media ( max-width :840px) {
+		.rcp-list {
+			margin-left: 3%;
+		}
+	}
+	@media ( max-width :810px) {
+		.rcp-list {
+			margin-left: 1%;
+		}
+	}
+	@media ( min-width :770px) and (max-width:809px) {
+		.rcp-list {
+			margin-left: 0%;
+		}
+	}
+	@media ( min-width : 512px) {
+		.rcp-list .visible-sm {
+			display: block !important;
+		}
+	}
+}
+
+/* -------------------------rcp 1024 margin ------------------------------ */
+@media ( min-width :1024px) and (max-width:1100px) {
+	.rcp-1024 {
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :1101px) {
+	.rcp-1024 {
+		margin-left: 3.5%;
+		margin-right: 3.5%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :1151px) {
+	.rcp-1024 {
+		margin-left: 5.5%;
+		margin-right: 5.5%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :1201px) {
+	.rcp-1024 {
+		margin-left: 7.5%;
+		margin-right: 7.5%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :700px) and (max-width:767px) {
+	.rcp-1024 {
+		margin-left: 14%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :630px) and (max-width:699px) {
+	.rcp-1024 {
+		margin-left: 12%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :570px) and (max-width:629px) {
+	.rcp-1024 {
+		margin-left: 7%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :530px) and (max-width:569px) {
+	.rcp-1024 {
+		margin-left: 2%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :512px) and (max-width:529px) {
+	.rcp-1024 {
+		margin-left: 0.5%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :450px) and (max-width:511px) {
+	.rcp-1024 {
+		margin-left: 20%;
+		padding: 0px;
+	}
+}
+
+@media ( min-width :400px) and (max-width:450px) {
+	.rcp-1024 {
+		margin-left: 15%;
+		padding: 0px;
+	}
+}
+
+/* -------------------------rcp 1024 margin end ------------------------------ */
+@media ( min-width :1023px) {
+	.rcp-height30 {
+		height: 60pt;
+		padding-left: 10%;
+		padding-top: 8%;
+		margin-bottom: 10pt;
+	}
+	.rcp-container {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.rcp-240 {
+		margin: 0 auto;
+	}
+	.rcp-margin-left {
+		margin-left: 60px;
+	}
+	.rcp-margin-right {
+		margin-right: 60px;
+	}
+	.rcp-margin-top {
+		margin-top: 10px;
+	}
+	.rcp-margin-bottom {
+		margin-bottom: 10px;
+	}
+	.rcp-list-margin {
+		/* margin-left:25px; */
+		padding: 0px;
+	}
+	.rcp-listPosition {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	.rcp-profile-position {
+		position: absolute;
+		margin-top: 44%;
+		left: 30px;
+	}
+	.rcp-profile {
+		width: 48px;
+		border: 1px solid #aaaaaa;
+		left: 7%;
+	}
+	.rcp-images {
+		width: 67px;
+		height: 67px;
+		padding-right: 0.2em;
+	}
+	.rcp-Grade {
+		position: relative;
+		text-align: right;
+	}
+	.rcp-recipeGrade {
+		position: relative;
+		text-align: center;
+	}
+	.rcp-left-slideButton {
+		position: absolute;
+		left: 5%;
+		top: 50%;
+		z-index: 100;
+	}
+	.rcp-right-slideButton {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		z-index: 100;
+	}
+	/* 	.rcp-profileName {
+		top: 0.8em;
+		left: 5%;
+	} */
+	.rcp-left_position {
+		font-weight: bold;
+	}
+	.rcp-comment {
+		text-align: center;
+		height: 67.9px;
+	}
+	.rcp-right-condiment {
+		text-align: left;
+		padding-left: 10%;
+	}
+	.item col-* {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.rcp-left-condiment {
+		text-align: right;
+		padding-right: 10%;
+	}
+	.rcp-buttons {
+		margin-bottom: 0px;
+	}
+	.rcp-cookTime {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		border: 1px solid #dddddd;
+		font-size: 0.8em;
+	}
+	.thumbnail {
+		margin-left: 4%;
+		margin-right: 4%;
+		padding: 0px;
+	}
+	.rcp-list rcp-listSize {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.rcp-list .visible-lg {
+		display: block !important;
+	}
+	.rcp-list .visible-md {
+		display: block !important;
+	}
+	.rcp-list .visible-sm {
+		display: block !important;
+	}
+}
+
+/* ------------------ font size --------------------- */
+@media ( min-width :1023px) and (max-width : 1199px) {
+	.rcp-relative {
+		position: relative;
+		width: 290px;
+	}
+	.rcp-height30 {
+		position: relative;
+		height: 50pt;
+	}
+	.rcp-right-slideButton {
+		left: 210px;
+		width: 20px;
+	}
+	.rcp-comment {
+		margin-left: 10px;
+		width: 210px;
+	}
+	.rcp-image-scale {
+		width: 100%;
+		height: 141px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 350px;
+	}
+	.rcp-list h3 {
+		font-size: 15pt;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+	.rcp-list h4 {
+		font-size: 12pt;
+		font-weight: bold;
+	}
+	.rcp-left_position {
+		
+	}
+	.rcp-list h5 {
+		font-size: 9pt;
+		margin-top: 11px;
+		margin-bottom: 5px;
+	}
+	.rcp-list p {
+		font-size: 8pt;
+		margin-bottom: 0.05em;
+	}
+}
+
+@media ( min-width :1200px) and (max-width : 1360px) {
+	.rcp-image-scale {
+		width: 100%;
+		height: 141px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 350px;
+	}
+}
+
+@media ( min-width :1360px) and (max-width : 1485px) {
+	.rcp-image-scale {
+		width: 100%;
+		height: 155px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 350px;
+	}
+}
+
+@media ( min-width :1200px) and (max-width : 1400px) {
+	.rcp-list h3 {
+		font-size: 14pt;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+	.rcp-list h4 {
+		font-size: 13pt;
+		font-weight: bold;
+		padding-bottom: 3px;
+	}
+	.rcp-left_position {
+		
+	}
+	.rcp-list h5 {
+		font-size: 10pt;
+		margin-top: 11px;
+		margin-bottom: 5px;
+	}
+	.rcp-list p {
+		font-size: 9pt;
+		margin-bottom: 0.05em;
+	}
+}
+
+/* ------------------ min 1024px defalut font size --------------- */
+@media ( min-width :1401px) {
+	.rcp-relative {
+		width: 100% ! important;
+	}
+	.rcp-list h3 {
+		font-size: 19pt;
+	}
+	.rcp-list h4 {
+		font-size: 13pt;
+		font-weight: bold;
+		padding-bottom: 5px;
+		margin-bottom: 6%;
+		width: 87%;
+		font-weight: bold;
+	}
+}
+
+.rcp-list p {
+	font-size: 9pt;
+	margin: 0%;
+}
+
+.rcp-image-scale {
+	width: 100%;
+	height: 181px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 350px;
+}
+
+}
+.rcp-scsinfo {
+	position: relative;
+	left: -8%;
+}
+
+.More {
+	font-size: 13pt
+}
+
+.More:hover {
+	color: #ff8000;
+}
+
+.rcp-profileNameDiv {
+	width: 100%;
+	float: left;
+	position: relative;
+	top: -50pt;
+	left: 15%;;
+}
+
+.rcp-rcpDateDiv {
+	float: left;
+	width: 87%;
+	padding-top: 8px;
+	padding-bottom: 5px;
+	margin-top: -15px;
+}
+
+.rcp-profileNameDiv>span {
+	
+}
+
+.rcp-recipeGradeDiv {
+	width: 10%;
+	float: left;
+	font-size: 10px !important;
+}
+
+.rcp-recipeGradePointDiv {
+	width: 22%;
+}
+
+.rcp-recipeGradePointDiv>span {
+	color: yellow;
+	font-size: 13pt;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: relative;
+	top: 230px;
+	left: 308%;
+	padding: 5pt;
+	border-radius: 20%;
+	left: 308%;
+}
+
+.recipe-info-wrapper {
+	height: 30%;
+}
+
+.pluu-left {
+	z-index: 89999;
+}
+
+.rcp-height30>a :hover {
+	color: #ff8040 !important;
+}
+
+.rcp-see {
+	font-size: 10pt;
+	padding-top: 4px;
+}
+
+.rcp-regdt {
+	font-size: 10pt;
+}
+
+@media ( max-width :1023px) {
+	.thumbnail a .rcp-profile {
+		height: 48px ! important;
+		position: relative;
+		top: 42px;
+	}
+}
+
+@media ( min-width :1024px) {
+	.thumbnail a .rcp-profile {
+		height: 48px ! important;
+		position: relative;
+		top: 44px;
+	}
+}
+
+@media ( min-width :1400px) {
+	.thumbnail a .rcp-profile {
+		height: 48px ! important;
+		position: relative;
+		top: 25px;
+	}
+}
+
+@media ( min-width :1600px) {
+	.thumbnail a .rcp-profile {
+		height: 48px ! important;
+		position: relative;
+		top: 0px;
+	}
+}
+
+span a {
+	color: #acacac;
+}
+
+.rcp-list-margin-top {
+	margin-top: 30px;
+	padding-bottom: 0px ! important;
+}
+
+.rcp-list-margin-bottom {
+	margin-bottom: 30px;
+	padding-top: 15px ! important;
+}
+
+.rcp-margin-bottom-70px {
+	margin-bottom: 70px;
+}
+
+.transientStorage {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 69px;
+	text-align: center;
+	color: white !important;
+	right: 10px;
+	padding-top: 4px;
+	height: 25px;
+	vertical-align: middle;
+	position: absolute;
+	z-index: 100;
+}
+
+.main_chef_container {
+	width: 978px !important;
+	margin: auto;
+}
+
+.rcp-BoC {
+	cursor: pointer;
+}
+
+.rcp-more-user-Page {
+	position: relative;
+	left: 10px;
+}
+
+#rcp-random-recipe {
+	width: 124px;
+	font-size: 14px;
+	position: relative;
+	top: 300px;
+	left: 250px;
+	color:black;
+}
+
+.rcp-index-p-margin{
+	margin-bottom:15px;
+}

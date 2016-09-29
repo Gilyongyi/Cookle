@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recipe.dao.VisitorDao">
+	<resultMap type="visitor" id="visitorMap">
+		<id column="vno" property="visitorNo" />
+		<result column="vct" property="visitorContent" />
+		<result column="vimg" property="visitorImg" />
+		<result column="vc_dt" property="visitorDate" />
+		<result column="uno" property="visitorUserNo" />
+		<result column="uno2" property="loginUserNo" />
+		<result column="username" property="user.userName" />
+		<result column="userNo" property="user.userNo" />
+		<result column="image" property="user.image" />
+	</resultMap>
+	
+	<resultMap type="user" id="userMap">
+    <id column="uno" property="userNo" />
+    <result column="name" property="userName" />
+    <result column="email" property="email" />
+    <result column="pwd" property="password" />
+    <result column="img" property="image" />
+    <result column="intro" property="intro" />
+    <result column="role" property="role" />
+    <result column="join_dt" property="joinDate" />
+    <result column="rcp_url" property="recipeUrl" />
+    <result column="rcpCount" property="recipeCount" />
+    <result column="scnt" property="subsCount" />
+    <result column="lcnt" property="likeCount" />
+    <result column="hits" property="hits" />
+    <result column="scrcnt" property="scrapCount" />
+    <result column="total" property="totalPoint" />
+    <result column="rownum" property="rownum" />
+    <result column="grade" property="grade" />
+    <result column="scsuno" property="subscribeUser" />
+    <result column="auth_key" property="authenticationKEY" />
+    <result column="auth" property="authentication" />
+  </resultMap>
+	
+	<!--uno - 방문자 / uno2 페이지주인  -->
+  
+  <select id="selectMyPageInfo" resultMap="userMap" parameterType="int">
+    SELECT *
+    FROM (select ifnull(count(r2.lc_dt),0) lcnt
+    from rcps r1,rcp_lik r2
+    where r1.rcpno=r2.rcpno and r1.uno=${value}) lik,
+    (select ifnull(count(r2.scc_dt),0) scrcnt
+    from rcps r1,rcp_scr r2
+    where r1.rcpno=r2.rcpno and r1.uno=${value}) scr,
+    (select ifnull(hits,0) hits
+    from users
+    where uno=${value}) hit, 
+    (select ifnull(count(*),0) scnt
+    from scs where uno2=${value}) subs  
+  </select>
+
+
+	<!-- mypage 정보 가지고 오기 -->
+<!-- 	<select id="loadMyPageLike" resultType="int" parameterType="int">
+		select ifnull(count(r2.lc_dt),0)
+		from rcps r1,rcp_lik r2
+		where r1.rcpno=r2.rcpno and r1.uno=${value}
+	</select>
+
+	<select id="loadMyPageScr" resultType="int" parameterType="int">
+		select ifnull(count(r2.scc_dt),0)
+		from rcps r1,rcp_scr r2
+		where r1.rcpno=r2.rcpno and r1.uno=${value}
+	</select>
+
+	<select id="loadMyPageSum" resultType="int" parameterType="int">
+		select ifnull(SUM(r1.hits),0)
+		from rcps r1
+		where r1.uno=${value}
+	</select>
+
+	<select id="loadMyPageAvg" resultType="int" parameterType="int">
+		select ifnull(avg(r1.gpa),0)
+		from rcps r1
+		where r1.uno=${value}
+	</select>
+
+	<select id="selectOne" resultMap="visitorMap" parameterType="int">
+		SELECT vno, vct, vc_dt, uno
+		FROM vsts
+		WHERE vno=#{value}
+	</select> -->
+	
+	<!-- list 완료 -->
+	<select id="selectList" resultMap="visitorMap" parameterType="Map">
+		SELECT v.vno,u.uno,u.name username,v.uno2,v.vct,v.vc_dt,u.uno userNo,u.img image
+		FROM users u
+		LEFT OUTER JOIN VSTS v ON u.uno=v.uno
+		WHERE v.uno2=#{userNo}
+		ORDER BY v.vno desc
+	</select>
+<!-- 여기에 mypage 주인 uno2가 들어가야함 visitorUserNo-->
+	<insert id="insert" parameterType="visitor">
+		INSERT INTO
+		VSTS(uno,uno2,vct,vimg,vc_dt)
+		VALUES
+		(#{loginUserNo},#{visitorUserNo},#{visitorContent},'없음',now())
+	</insert>
+
+	<update id="update" parameterType="visitor">
+		UPDATE vsts
+		<set>
+			vct = #{visitorContent}
+		</set>
+		WHERE vno =#{visitorNo}
+	</update>
+
+	<!-- delete 완료 -->
+	<delete id="delete" parameterType="int">
+		DELETE FROM VSTS
+		WHERE
+		vno=#{no}
+	</delete>
+
+</mapper>

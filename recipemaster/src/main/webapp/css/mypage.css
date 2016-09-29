@@ -1,0 +1,617 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+.navbar {
+	height: 51px;
+}
+
+margin: 10px ; margin-top: 10px ; width: 30%; height: 280px ;
+	/* box-shadow: 5px 5px 5px #888888; */ float: left ;
+	.rcp-forDelete-xButton {
+	position: absolute;
+	width: 30px;
+	left: 250px;
+	bottom: 0px;
+}
+
+.rcp-x-button {
+	border: 0.5px solid #cecece ! important;
+}
+
+.rcp-profile-img {
+	/* 	margin-top: 20%; */
+	width: 50%;
+}
+
+#userNickName {
+	margin-top: 0.5em;
+	font-size: 2em;
+	font-weight: 2px;
+}
+
+#userLevel {
+	font-size: .8em;
+}
+
+#userIntroduce {
+	margin-top: 0.5em;
+	font-size: 1em;
+}
+
+#postingBtn {
+	background-color: white;
+	font-size: 1.5em;
+	/*font-weight: bold;*/
+	color: #b51515;
+	margin-left: 15%;
+	margin-top: 10px;
+	width: 70%;
+	padding: 7px;
+	border-radius: 0.3em;
+}
+
+#menus {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.menu {
+	color: white;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+#spoonImg {
+	position: absolute;
+	bottom: 25px;
+	right: 5px;
+	width: 9em;
+}
+
+.left-box {
+	background: #b51515;
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/* -----------------------------------------상일이형 css 끝 --------------------------- */
+/* ======================================================== */
+body {
+	background: #f0f0f0;
+}
+
+.rcp-pagemiddle1 {
+	margin-bottom: 13%;
+	color: #515d6e;
+}
+
+.rcp-userPage-userName {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rcp-topimg-position hr{
+    border-top:1px solid #b9b9b9;
+    bottom:30px;
+}
+
+.rcp-pagetop h2{
+	font-size : 30px;
+}
+
+.rcp-pagemiddle-div1 {
+	font-family: 'Jeju Gothic', sans-serif;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: white;
+	width: 22%;
+	height: 100px;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.rcp-pagemiddle-div2 {
+	font-family: 'Jeju Gothic', sans-serif;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: white;
+	width: 22%;
+	height: 100px;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.rcp-pagemiddle-div3 {
+	font-family: 'Jeju Gothic', sans-serif;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: white;
+	width: 22%;
+	height: 100px;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.rcp-pagemiddle-div4 {
+	font-family: 'Jeju Gothic', sans-serif;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: white;
+	width: 22%;
+	height: 100px;
+	position: relative;
+	float: left;
+	padding: 20px;
+}
+
+.rcp-pagemiddle-div-img {
+	position: relative;
+	width: 50px;
+	height: 50px;
+}
+
+.heading {
+	display: block;
+	position: relative;
+	color: #515d6e;
+	text-align: right;
+	z-index: 10;
+	font-size: 1.2em;
+	font-weight: 300;
+	text-transform: uppercase;
+	top: -50px;
+}
+
+.value {
+	display: block;
+	position: relative;
+	font-size: 2.1em;
+	font-weight: 600;
+	margin-top: 5px;
+	text-align: right;
+	top: -62px;
+}
+
+/* ======================================================== */
+.navbar {
+	top: 0px !important;
+}
+
+.fa-windows {
+	color: #1C7EBB;
+}
+
+.rcp-fullpage {
+	
+	margin-bottom: 3%;
+}
+
+.rcp-pagetop {
+	/*  background-color: #D4F4FA; */
+/* 	background-image: URL(../img/header-bg2.jpg);
+	width: 100%;
+	height: 315px; */
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+background: url(../../img/slide-restaurant-2.jpg);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: contain;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+	/*  background: white !important; */
+}
+
+.rcp-profileCover {
+	height: 358px;
+}
+
+.rcp-topimg-border {
+	background: rgba(0, 0, 0, .3);
+	border-radius: 3px;
+	padding: 1px;
+	position: relative;
+	
+	bottom:30px;
+}
+
+.rcp-mypage-container{
+    height: 50px;
+    margin: auto;
+    width: 850px;
+    text-align: center;
+}
+
+
+.rcp-mypage-userInfo{
+	     position: relative;
+    float: left;
+    color: white;
+}
+.rcp-userInfo{
+	    height: 50px;
+    width:700px;
+    margin:auto;
+    position: relative;
+    bottom:20px;
+}
+
+/* .rcp-count-visit{
+
+    left: 85px;
+}
+
+.rcp-count-like{
+	left: 170px;
+}
+
+.rcp-count-scrap{
+	left:255px;
+}
+.rcp-count-grade{
+	left:340px;
+} */
+
+.rcp-topinfo h2{
+	font-size:30px;
+	  position: relative;
+    left: 12%;
+    top: 10px;
+}
+
+.rcp-bottomLine-info {
+	height: 43px;
+	background-color: white;
+}
+
+.rcp-topimg {
+	height: 64px;
+	width: 64px;
+	float: left;
+	background-color: #fff;
+	border: 3px solid #fff;
+	position : relative;
+	
+}
+
+.rcp-topimg-position {
+	border-radius: 2px;
+	margin-left: 30px;
+	padding-top: 180px;
+}
+
+}
+.rcp-topinfo {
+	/*font-weight: bold;*/
+	padding-left: 1%;
+	padding-top: 19%;
+}
+
+.rcp-topinfo>h3 {
+	font-size: 18pt;
+}
+
+.rcp-pagemiddle {
+	width: 100%;
+	height: 10%;
+}
+
+
+#tabs {
+	border: 0px;
+	background-color: #f0f0f0;
+	margin: auto;
+}
+
+.rcp-pageleft {
+	width: 100%;
+	float: left;
+	padding: 10px;
+	border: 0px solid #f0f0f0 !important;
+}
+
+.rcp-tabs {
+	border: 0px solid #ffffff;
+}
+/* .rcp-pageright {
+	width: 30%;
+	float: right;
+	border: 1px solid #BDBDBD;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: white !important;
+} */
+#Vst {
+	width: 100%;
+}
+
+.rcp-Vst-vno {
+	margin-left: -7%;
+}
+
+.rcp-Vst-id {
+	font-color: #000000;
+	margin-left: 30%;
+}
+
+.rcp-Vst-write {
+	z-index: 99999;
+	margin: 10px;
+	background-color: #ffffff;
+	width: 97%;
+	border: 1px solid #BDBDBD;
+	border-radius: 10px;
+}
+
+.inputWrite {
+	padding: 10px;
+}
+
+.rcp-Vst-inputBtn {
+	position: relative !important;
+	top: -25pt !important;
+	left: 19pt !important;
+	height: 53pt !important;
+	width: 74pt !important;
+}
+
+.rcp-Vst-contents-rep>hr {
+	margin: 0;
+}
+
+.rcp-Vst-contents>p {
+	font-family: 'Nanum Pen Script', serif;
+	font-size: 19pt;
+}
+
+.hs-content-visit {
+	margin-bottom: 110px;
+	margin-top: -40px;
+}
+
+.rcp-Vst {
+	margin: 10px;
+	margin-top: 10px;
+	width: 30%;
+	height: 280px;
+	float: left;
+}
+
+.rcp-Vst-top {
+	background-color: 8C8C8C;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 30%;
+}
+
+.rcp-Vst-bottom {
+	background-color: #FFFF8F;
+	width: 100%;
+	height: 70%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.rcp-Vst-footer {
+	width: 100%;
+	height: 60px;
+	border: 1px solid #BDBDBD;
+}
+
+#tabs-1 .hs-content .container .row .rcp-Vst-write {
+	display: none;
+}
+
+#tabs-2 .hs-content .container .row .rcp-Vst-write {
+	display: none;
+}
+
+#tabs-3 .hs-content .container .row .rcp-Vst-write {
+	display: none;
+}
+
+.rcp-Vst-img {
+	    position: relative;
+    width: 65px;
+    height: 65px;
+    top: 9px;
+    margin-left: 11px;
+    padding-top: 0;
+}
+
+.rcp-Vst-img-rep {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.rcp-Vst-img-rep1 {
+	position: relative;
+	left: 1%;
+	top: 1%;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.rcp-Vst-common {
+	padding-left: 5px;
+	padding-top: -10px;
+	margin-top: -70px;
+	color: #8c94a2 font-size: 11pt;
+	/*font-weight: bold;*/
+}
+
+.rcp-Vst-contents {
+	font-size: 10pt;
+	padding: 10pt;
+}
+
+.rcp-Vst-contents-rep {
+	background-color: white;
+	padding-left: 10pt;
+	padding-top: 10pt;
+	padding-bottom: 10pt;
+	border: 1px solid #BDBDBD;
+}
+
+.vstUpdateBtn {
+	position: relative;
+	left: 72%;
+	top: 10%;
+}
+
+.vstResetBtn {
+	position: relative;
+	left: 73%;
+	top: 11%;
+}
+
+.vstConfirmBtn {
+	position: relative;
+	left: 72%;
+	top: 10%;
+}
+
+.rcp-Vst-moreRp {
+	text-align: center;
+	background-color: white;
+	border: 1px solid #BDBDBD;
+}
+
+.vstDeleteBtn {
+	position: relative;
+	left: 73%;
+	top: 11%;
+}
+
+.rcp-Vst-submitBtn {
+	position: relative;
+	left: 1%;
+	top: 79%;
+}
+
+  .hs-recipes .isotope-filter {
+    /* position: relative; */
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    /* right: 16%; */
+    font-family: 'Raleway', sans-serif;
+     
+    
+    }
+    .hs-recipes .isotope-filter a{
+    display: block;
+    padding: 12px 24px;
+    color: #999999;
+    
+    }
+          .hs-recipes .isotope-filter li.is-filtered a {
+        color: #2b2b2b; }
+      .hs-recipes .isotope-filter li.is-filtered:before {
+        width: 100%; }
+    .hs-recipes .isotope-filter a {
+      display: block;
+      padding: 12px 24px;
+      color: #999999; }
+      .hs-recipes .isotope-filter a:hover {
+        color: #2b2b2b; }
+        
+        .hs-recipes .isotope-filter li:before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: #2b2b2b;
+    left: 0;
+    bottom: -1px;
+    -webkit-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+
+#rcp-Vst-time {
+  font-color: #000000;
+  margin-left: 13%;
+}
+
+.rcp-topbtn {
+  position: relative;
+  top: 16px;
+  right: -85%;
+  border: none;
+  background-color:#e80000;
+  border-bottom: 5px solid #a91c14;
+  cursor: pointer;
+  width: 136px;
+}
+
+.animate
+{
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: 'Jeju Gothic', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;  
+}
+
+.action-button:active
+{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  border-bottom: 1px solid;
+}
+.rcp-visible{
+	visibility: visible;
+}
+
+.p-xlg h2{
+	color: #44494b;
+}
+
+.rcp-p-xlg-padding{
+	padding-top:0px ! important;
+	padding-bottom:10px ! important;
+}
+
+.subscribeBtn{
+	color: white;
+}
+
+.subscribeBtn:HOVER{
+  color: #EFAB42;
+}
+
+.subsactive{
+	color: #EFAB42 !important;
+}
+
+.subsactive:HOVER{
+  color: white !important;
+}

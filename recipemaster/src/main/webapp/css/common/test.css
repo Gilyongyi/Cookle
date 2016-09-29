@@ -1,0 +1,29 @@
+.rating {
+  float: left;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  color: #ddd;
+  float: right;
+}
+.rating label:before {
+  margin: 5px;
+  font-size: 30px;
+  font-family: fontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rating .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+/* hover previous stars in list */

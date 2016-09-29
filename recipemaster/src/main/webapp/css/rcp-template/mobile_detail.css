@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+.mobile-rcp-detail-box {
+	text-align: center;	
+}
+
+.mobile-rcp-detail-title {
+	font-size: 3.5em;
+  color: white;
+  margin: 0 auto;
+}
+
+.mobile-rcp-detail-title-backgroundimg {
+	height: 30em;
+}
+
+.mobile-rcp-detail-step1-box {
+	padding: 10px;
+	margin: 10px;
+}
+
+.mobile-rcp-detail-step1-img {
+	height: 30em;
+}

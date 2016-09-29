@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+
+
+.rcp-subscribe-detail{
+width:630px;
+background-color:white;
+padding:10px;
+margin:auto;
+margin-bottom: 20px;
+border:1px solid #e8e8e8;
+/* box-shadow: 0px 0px 10px #989898; */
+}
+
+.rcp-subscribe-priview-image-margin{
+    margin-left: 25px;
+}
+
+.rcp-viewMore{
+  float:right; 
+  color:#c3c3c3;
+}
+.rcp-subscribe-column{
+  height : 200px;
+}
+
+.rcp-left-div{
+  width:300px;
+}
+.rcp-right-div{
+  width:300px;
+  float: left;
+}
+
+.rcp-float-left-div{
+  float: left;
+}
+.rcp-float-right-div{
+  float: right;
+}
+.rcp-subscribe-image{
+  width:300px;
+  height:200px;
+  
+}
+
+.rcp-element-default-position{
+  width:280px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.rcp-subscribe-profile{
+  width:45px;
+  height:45px;
+  
+}
+
+.rcp-subscribe-recipe-name{
+  width:230px;
+  float:right;
+  
+}
+
+.rcp-subscribe-preview{
+  
+  
+}
+
+
+.rcp-subscribe-preview-image{
+  width:80px;
+  height: 55px;
+  
+}
+
+.rcp-subscribe-viewmore{
+  text-align:right;
+  margin-top:7px;
+  margin-right:20px;
+}
+
+
+/* ------------------------------------------css shapes---------------------------------------- */
+
+
+#triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 10px solid transparent;
+    position: relative;
+    left: 380px;
+    top: 110px;
+    margin:0px;
+}
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid white;
+  border-bottom: 10px solid transparent;
+  position: relative;
+  left: 395px;
+  top: 110px;
+  margin:0px;
+}
+
+/* ---------------------------------------font css---------------------------------------- */
+
+
+.rcp-subscribe-h2-tag{
+  margin-top:10px;
+}
+.rcp-subscribe-p-tag{
+  margin-bottom:0px;
+  font-size:17px;
+}
+
+.rcp-subscribe-recipe-name h6{
+  margin-top:5px;
+}
+
+.rcp-first-p-margin{  
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.rcp-subscribe-preview-p-tag{
+  margin-top:15px;
+  margin-bottom:0px;
+  padding-top:5px;
+  font-size:12px;
+  color:#828282;
+}

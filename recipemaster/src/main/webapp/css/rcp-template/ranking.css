@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+
+.p-xlg {
+	padding: 0px ! important;
+}
+
+.content {
+	margin: auto;
+	width: 978px;
+	height: 100%;
+}
+
+.rcp-ranking-middle-background {
+	/* background-color: #D4F4FA; */
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: url(../../img/slide-restaurant-2.jpg);
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	background-size: contain;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	/* background: white !important; */
+}
+
+.rcp-ranking-middle-background-comment {
+	position: relative;
+	text-align: center;
+	top: 110px;
+	font-size: 18pt;
+}
+
+.p-xlg {
+	margin-top: 60px;
+}
+
+.rcp-ranking {
+	height: 800px;
+}
+
+.custom-divider {
+	width: 100%;
+	visibility: visible;
+	position: relative;
+}
+
+.rcp-ranking {
+	margin-top: 100px;
+}
+
+.rcp-ranking-form {
+	margin-top: 20px;
+}
+
+.rcp-user-ranking {
+	color: gray;
+	height: 56px;
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 12px;
+}
+
+.rcp-user-ranking-content {
+	color: gray;
+	height: 50px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.rcp-rcnking-top-9 {
+	position: relative;
+	top: 9px;
+}
+
+.rcp-ranking-text-left {
+	text-align: left;
+}
+
+.rcp-ranking-text-center {
+	text-align: center;
+}
+
+.rcp-ranking-position {
+	position: relative;
+	top: 12px;
+}
+
+.rcp-ranking-image {
+	float: left;
+	width: 45px;
+	height: 45px;
+}
+
+.rcp-ranking-userName {
+	padding-left: 60px;
+	font-size: 1.6rem;
+	margin-bottom: 0px ! important;
+	cursor: pointer;
+}
+
+.rcp-ranking-chef-rank {
+	padding-left: 60px;
+}
+
+.rcp-ranking-recipeName {
+	width: 250px;
+	font-size: 1.6rem;
+	margin-bottom: 0px ! important;
+	position: relative;
+	top: 8px;
+}
+
+.rcp-recipe-ranking {
+	color: gray;
+	height: 56px;
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 12px;
+}
+
+.rcp-ranking-num {
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
+.ranking-topName{
+	font-size: 20pt;
+}
+
+.bxrank{
+	font-size: 22px !important;
+	font-family: 'Raleway', sans-serif;
+	color: gray;
+}

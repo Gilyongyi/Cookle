@@ -1,0 +1,438 @@
+@CHARSET "UTF-8";
+
+
+.rcp-detail-form{
+  width:1024px;
+  height:880px;
+  bottom:0px;
+  margin-top: 50px;
+}
+.rcp-comment-date{
+	font-size:7pt;
+}
+.cs-comments-area{
+	height: 100px;
+}
+.cs-comment-content{
+	margin-top:6px;
+}
+.rcp-comment-indexNum{
+	float:left;
+}
+.avatar{
+	width: 50px;
+	height:50px;	
+}
+.rcp-scrap-button-text-like{
+      color: white;
+    font-size: 9pt;
+    position: relative;
+    width: 100px;
+    left: 180px;
+    bottom: 11px;
+    
+}
+
+.rcp-scrap-button-text{	
+  position:relative;
+  width:90px; 
+  color:white;
+  right:40px;
+  margin:0px;
+  top:18px;
+  font-size:9pt;
+}
+.rcp-i-tag-margin-right-top{
+	margin-right: 5px;
+	margin-top:10px;
+}
+
+.rcp-scrap-button-text a{
+	font-size:12px;
+	color:white;
+	margin-top:8px;
+}
+#detail_pop_up{
+  display:none;
+}
+
+.rcp-720{
+  width:720px;
+  height:650px;
+  float:left;
+  background-color: white;
+}
+
+.rcp-304{
+  width:304px;
+  height:650px;
+  float:left;
+  background-color: #383838;
+  
+}
+
+
+.rcp-detail-form .rcp-header{
+   margin-left:35px;
+   z-index: 1;
+   position: relative;
+}
+
+.rcp-detail-body{
+	  margin-left : 80px;
+  margin-right : 80px;
+  margin-top : 50px;
+}
+
+.bx-wrapper{
+	box-shadow:0 0 0px ! important;
+}
+/* 
+.rcp-detail-form .rcp-body{
+  
+  margin-left : 80px;
+  margin-right : 80px;
+  margin-top : 20px;
+  
+} */
+
+.rcp-body .rcp-images{
+    margin: auto;
+    width: 400px ! important ;
+    height: 230px ! important ;
+    border-radius: 15px;
+    position: relative;
+    right:10px;    
+}
+.rcp-comment-count{
+	font-size:16px ! important;
+}
+.rcp-info-items{ 
+    position: relative;
+    width: 198px;
+    height: 230px;
+    left: 65px;
+    top: 11px;
+}
+
+.rcp-icons{
+  float: left;
+  width: 25px;
+}
+.rcp-icons .fa{
+  margin-bottom:13px;
+}
+
+.rcp-icons-names {
+	color:white;
+  float: left;
+  
+}
+.rcp-icons-names p{
+  font-size:15px;
+  margin: 0 0 7px;
+}
+
+.rcp-icons-info p{
+	margin: 0 0 7px;
+}
+
+.rcp-icons-info{
+	color:white;
+}
+
+.fa-eye{
+  color:#afafaf;
+  width:150%;
+  height: 150%;
+}
+
+.fa-comments{
+  color:#afafaf;
+  width:150%;
+  height: 150%;
+}
+.fa-external-link{
+  color:#afafaf;
+  width:150%;
+  height: 150%;
+}
+
+.fa-heart{
+  color:#afafaf;
+  width:150%;
+  height: 150%;
+}
+
+.fa-star{
+	color:#afafaf;
+  width:150%;
+  height: 150%;
+}
+
+.rcp-info-next{
+	position:relative;
+	visibility:visible;
+  width:100%;
+  border-top: 0.1px solid #afafaf;
+  margin-top: 0px;
+  margin-bottom:5px;
+}
+
+.rcp-info-images{
+  margin-top:10px;
+  margin-left:60px;
+  margin-right:60px;
+  height: 260px;
+  overflow-y: auto; 
+  overflow-x:hidden; 
+  
+}
+.rcp-info-images a{
+  color:white;
+}
+.rcp-first-info{
+  background-color:white; 
+  width:50px; 
+  left:700px; 
+  top:100px;
+  height: 90px; 
+  position:relative;
+  border-radius: 10px;
+  z-index:10;
+}
+
+.rcp-seconde-info{
+  background-color:#dddddd;
+  width:50px; 
+  left:700px; 
+  top:80px;
+  height: 90px; 
+  position:relative;
+  border-radius: 10px;
+  z-index:9;
+}
+.rcp-third-info{
+  background-color:#b2b2b2;
+  top:55px;
+  width:50px; 
+  left:700px; 
+  height: 90px; 
+  position:relative;
+  border-radius: 10px;
+  z-index:8;
+}
+.rcp-fourth-info{
+  background-color:#939393;
+  top:25px;
+  width:50px; 
+  left:700px; 
+  height: 90px; 
+  position:relative;
+  border-radius: 10px;
+  z-index:7;
+}
+.rcp-fifth-info{
+	background-color:black;
+  width:50px; 
+  left:700px; 
+  height: 90px; 
+  bottom:10px;
+  position:relative;
+  border-radius: 10px;
+  z-index:6;
+}
+
+
+
+
+.rcp-taps{
+  height: 600px;
+}
+
+.rcp-detail-form .rcp-explanation{
+  margin-top:40px;
+}
+
+.rcp-main{
+  margin-top:15px;
+
+}
+.rcp-info-images-emts{
+    width: 100%;
+    height: 92px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 169px;
+  
+}
+
+.rcp-720{
+	overflow-y: auto; 
+  overflow-x:hidden; 
+}
+ 
+.rcp-detail-form .rcp-nav-down{
+  margin-top:100px;
+  text-align:center;
+
+}
+
+
+.rcp-explanation p{
+  font-size:12pt;
+  margin-bottom:6px;
+  color: #494949;
+  position: relative;
+  top:20px;
+}
+
+.rcp-detail-form .rcp-bodyTitle{
+  color:#b2b2b2;
+  font-size:18pt;
+}
+
+.rcp-body{
+	float: none;
+    list-style: none;
+    position: relative;
+    width: 550px ! important;
+    height : 550px ! important;
+}
+
+.rcp-detail-form .title{
+  color:#383838;
+  font-size:25pt;
+  margin-top:30px;
+
+}
+.rcp-detail-form .date{
+  float:left;
+  font-size:10px;
+}
+
+.rcp-detail-form .hr{ 
+  border-top:1px solid #eaeaea;
+}
+
+.rcp-view-comment{
+    margin-right: 50px;
+    float: right;
+    cursor:pointer;
+}
+
+.rcp-view-recipe{
+    margin-right: 50px;
+    float: right;
+    cursor:pointer;
+}
+
+.rcp-title-size {
+    width: 500px;
+    float: left;
+    bottom: 40px;
+    position: relative;
+}
+.rcp-info-filter a{
+  color:white;
+  margin-left:30px;
+}
+
+
+.rcp-right-profile{
+   position:relative;
+   width:55px ! important;
+   height:55px ! important;
+   text-align:center;
+   top:30px;
+   left:90px ! important;
+}
+
+.rcp-304 .rcp-nickname{
+	position:relative;	
+  font-size:15pt;
+  text-align: center;
+  color: white;
+  left : 100px ;
+  top:36px;
+}
+
+.rcp-304 .rcp-detail-title{
+ position:relative;
+ left:140px;
+ font-size:0.9em ! important;
+  color: white;
+  
+  }
+
+  .bx-viewport{
+    height: 460px ! important;
+        position: relative;        
+  }
+  
+.bx-wrapper .bx-next {
+  right: 0px !important;
+  top: 35% !important;
+}
+
+.bx-wrapper .bx-prev {
+  left: 0px !important;
+  top: 35% !important;
+}
+
+.rcp-mainImg{
+  width: 578px !important;
+  margin-right: 70px;
+  float: left;
+    list-style: none;
+    position: relative;
+}  
+
+.rcp-mainSlider{
+  padding: 0;
+}  
+
+.rcp-explanation p {
+	width:550px;
+}
+
+.timerZone{
+  position: absolute;
+  top: 0;
+  right: 50px;
+  text-align: left;
+}
+
+.timerObj{
+	background-color: transparent;
+	font-size: 13px;
+	width: 100%;
+	height: 23px;
+}
+
+
+.rcp-detail-title{
+	height:27px;
+}
+
+
+.rcp-recipe-edit-button{
+	margin-left:10px;
+	font-size:12px;
+	
+}
+
+.hash{
+	    position: relative; 
+}
+.date{
+	    position: relative; 
+}
+
+.rcp-images-main{
+	top:0px ! important;
+}
+
+.rcp-720{
+	overflow: hidden;
+}

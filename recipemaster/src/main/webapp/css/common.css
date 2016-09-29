@@ -1,0 +1,674 @@
+/********** main header css 시작 ***********/
+@import
+	'https://fonts.googleapis.com/css?family=Audiowide|Bungee|Niconne|Sigmar+One'
+	;
+
+#footer {
+	text-align: center;
+}
+
+header {
+	margin-bottom: 2em;
+}
+
+.rcp-random-recipe {
+	margin-top: 10px;
+}
+
+.rcp-re-recipe {
+	position: absolute !important;
+	top: 85%;
+}
+
+.rcp-re-recipe:hover {
+	color: #000000 !important;
+	box-shadow: 0 -100px 0 0 #DBDBDB inset !important;
+}
+
+#rcp-random-recipe:hover {
+	color: #000000 !important;
+	box-shadow: 0 -100px 0 0 #DBDBDB inset !important;
+}
+
+.rcp-roulette {
+	z-index: 99999;
+	cursor: pointer;
+	height: 50px;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	position: absolute;
+	top: 100px;
+	right: 45%;
+	height: 50px;
+}
+
+.rcp-roulette:hover {
+	height: 250px;
+	right: 24%;
+	top: 45px;
+	-webkit-transform: rotate(720deg);
+	-moz-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+	transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+}
+
+#searchBar2 #searchCondition-select {
+	width: 30%;
+}
+
+#searchBar2 .searchKeyword {
+	width: 70%;
+}
+
+.rcp-container {
+	width: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-left: 6em;
+	padding-right: 6em;
+}
+
+.rcp-container-top {
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.rcp-mask {
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.rt-navbar-top-logo {
+	width: 10em;
+	margin-left: 1.3em;
+	margin-right: 1em;
+	margin-top: -5px;
+}
+
+.rcp-navbar-searchbar-size {
+	width: 55%;
+}
+
+.rcp-rt-recipe-btn {
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 0.3em;
+	color: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0.0);
+	padding: 0.4em;
+	font-size: 1em;
+	width: 8em;
+	margin-left: 10%;
+}
+
+@media ( max-width : 769px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 0.25em;
+		font-size: 0.6em;
+		width: 13em;
+		margin-left: 1.5em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 770px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 0.25em;
+		font-size: 0.6em;
+		width: 13em;
+		margin-left: 1.5em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1000px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 0.25em;
+		font-size: 0.6em;
+		width: 13em;
+		margin-left: 1.5em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.65em;
+		width: 13em;
+		margin-bottom: 0.5em;
+		margin-left: 3em;
+	}
+}
+
+@media ( min-width : 1300px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.7em;
+		width: 12em;
+		margin-left: 4.5em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1600px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.7em;
+		width: 14em;
+		margin-left: 7em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1900px) {
+	.rcp-rt-recipe-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 5px;
+		font-size: 0.7em;
+		width: 14em;
+		margin-left: 11em;
+		margin-bottom: 0.5em;
+	}
+}
+
+.rcp-rt-chef-btn {
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 0.3em;
+	color: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0.0);
+	padding: 0.4em;
+	font-size: 1em;
+	width: 8em;
+}
+
+@media ( min-width : 770px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 0.25em;
+		font-size: 0.6em;
+		width: 13em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1000px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 0.25em;
+		font-size: 0.6em;
+		width: 13em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.65em;
+		width: 13em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1300px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.7em;
+		width: 12em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1600px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 3px;
+		font-size: 0.7em;
+		width: 14em;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media ( min-width : 1900px) {
+	.rcp-rt-chef-btn {
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		border-radius: 0.3em;
+		color: rgba(255, 255, 255, 1);
+		background: rgba(0, 0, 0, 0.35);
+		padding: 5px;
+		font-size: 0.7em;
+		width: 14em;
+		margin-bottom: 0.5em;
+	}
+}
+
+.rcp-inputgroup-width-70 {
+	width: 100%;
+}
+
+.rcp-btn-default-2 {
+	/* border: 1px solid rgba(255, 255, 255, 0.7); */
+	border-radius: 0.3em;
+	color: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0.0);
+	padding: 0.5em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	font-size: 1.2em;
+}
+
+.rcp-btn-default-top {
+	border-radius: 0.3em;
+	color: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0.0);
+	padding: 0.5em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+	font-size: 1.3em;
+}
+
+header .header-content {
+	position: relative;
+	text-align: center;
+	padding: 100px 15px 100px;
+	width: 100%;
+}
+
+#searchBarKeywordBtn {
+	background-color: #FFFFFF;
+	background-image: none;
+	border: 0px solid transparent;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	color: #929496;
+	display: block;
+	font-size: 15px;
+	height: 1em;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s
+		ease-in-out 0s;
+}
+
+.rcp-rt-recipe-rank {
+	font-size: 0.8em;
+	text-align: left;
+	text-overflow: ellipsis;
+	position: relative;
+	overflow: hidden;
+	height: 7.5em;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+@media ( min-width : 1000px) {
+	.rcp-rt-recipe-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 25%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.rcp-rt-recipe-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 36%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1600px) {
+	.rcp-rt-recipe-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 46%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1900px) {
+	.rcp-rt-recipe-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 55%;
+		padding-right: 0%;
+	}
+}
+
+.rcp-rt-chef-rank {
+	font-size: 0.8em;
+	text-align: left;
+	text-overflow: ellipsis;
+	position: relative;
+	overflow: hidden;
+	height: 7.5em;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+@media ( min-width : 1000px) {
+	.rcp-rt-chef-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 18%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.rcp-rt-chef-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 16%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1600px) {
+	.rcp-rt-chef-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 15%;
+		padding-right: 0%;
+	}
+}
+
+@media ( min-width : 1900px) {
+	.rcp-rt-chef-rank {
+		font-size: 0.7em;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+		height: 8.5em;
+		padding-left: 13%;
+		padding-right: 0%;
+	}
+}
+
+.rcp-signin {
+	z-index: 99990;
+}
+
+.rcp-header-info {
+	z-index: 500;
+}
+
+/********** main css 종료 - 박상일 ***********/
+.float_left {
+	float: left;
+}
+
+.margin_right_10px {
+	margin-right: 10px !important;
+}
+
+.margin_bottom_30px {
+	margin-bottom: 30px !important;
+}
+
+.margin_bottom_40px {
+	margin-bottom: 40px !important;
+}
+
+.margin_bottom_50px {
+	margin-bottom: 50px !important;
+}
+
+.margin_bottom_60px {
+	margin-bottom: 60px !important;
+}
+
+.margin_bottom_70px {
+	margin-bottom: 70px !important;
+}
+
+.padding_10px {
+	padding: 10px;
+}
+
+.width_180px {
+	width: 180px !important;
+}
+
+#random-pop-up-banner {
+	display: none;
+	padding-top: 0.1%;
+	background: white;
+	width: 19%;
+	height: 44%;
+}
+
+#random-pop-up-banner .rcp-list-margin {
+	width: 100%;
+}
+
+#rcp-randomRacipeCardWrapper-slot {
+	overflow: hidden;
+	hide
+	the
+	stuff
+	height
+	:
+	350px;
+	size
+	the
+	viewable
+	window
+	(equal
+	to
+	image
+	height)
+	display
+	:
+	inline-block;
+}
+
+/************************ 랜덤 슬롯 ************************/
+/* 슬라이더 기본 위치 */
+#rcp-randomRacipeCardWrapper-slot .slotCard {
+	width: 100%;
+	height: 455px;
+	list-style: none;
+}
+.slotCard{
+	margin-left: 10pt !important;
+}
+
+#slot_box {
+	background-color:white;
+	position: relative;
+	width: 283px;
+	height: 433px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.rigth_position_15px {
+	right: 15px !important;
+}
+
+.rigth_position_0 {
+	right: 0;
+}
+
+.top_position_30px {
+	top: 30px;
+}
+
+.display_none {
+	display: none;
+}
+
+.padding_top_15px {
+	padding-top: 15px;
+}
+
+.timerBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	font-size: small;
+	background: transparent;
+	border: transparent;
+	color: #717171;
+}
+
+#logo-cookleHome {
+	font-family: 'Niconne', cursive;
+	font-size: 30pt;
+	font-weight: bold;
+	color: white;
+}
+
+.logo-cookle {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+.rcp-mainlogo {
+	font-family: 'Niconne', cursive;
+	font-size: 150pt;
+	color: white;
+	cursor: context-menu;
+}
+
+.rcp-sublogo {
+	font-family: 'Niconne', cursive;
+	font-size: 30pt;
+	color: white;
+	cursor: context-menu;
+}
+
+.padding_6px {
+	padding: 6px !important;
+}
+
+.margin_right_10px {
+	margin-right: 10px;
+}
+
+#searchKeyword {
+	border: none;
+	height: 30px;
+	width: 180px;
+	height: 100%;
+}
+
+#searchKeyword:focus {
+	background-color: #fff;
+	box-shadow: none;
+	color: #4d4d4d;
+	-webkit-box-shadow: none;
+	outline: -webkit-focus-ring-color auto 0px;
+}
+
+.searchWrapper {
+	border: 1px solid #acacac;
+	border-radius: 3px;
+	color: #acacac;
+}
+
+#searcIcon {
+	margin: 10px;
+}
+
+.text_deco_none:link {
+	text-decoration: none;
+}
+
+.text_deco_none:hover {
+	text-decoration: none;
+}
+
+.active {
+	color: #e09b23
+}
+
+.rcp-p-black {
+	color: #acacac ! important;
+}
+
+a {
+	text-decoration: none ! important;
+}
+
+#random-pop-up-banner{
+	width:283px;
+}

@@ -1,0 +1,143 @@
+#rcp-category-section {
+	color: #000000;
+	font-size: 20px;	
+	text-align: center;
+	/* box-shadow: 0px 5px 5px lightgray; */
+	width: 1190px;
+	margin: 114px auto 10px;
+	height: 160px;
+}
+
+#rcp-category-div {
+  text-align: left;	
+}
+
+.category-name {	
+	border-style: solid;
+	border-radius: 6px;
+	border-color: #b51515;
+	margin-right: 10px;	
+	padding: 2px;		
+}
+
+.rcp-category input[type="checkbox"],
+.rcp-category input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.rcp-category label {
+	font-weight: 0; !important;
+  position: relative;
+  display: inline-block;
+  /* margin-right: 10px;
+  margin-bottom: 10px; */
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.rcp-category label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  z-index: -1;
+}
+.rcp-category input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+.rcp-category input[type="checkbox"]:checked + label,
+.rcp-category input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+.rcp-category input[type="checkbox"]:checked + label::before,
+.rcp-category input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #b51515;
+}
+/* Transition */
+.rcp-category label,
+.rcp-category label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+
+
+.category{	
+	float: left;
+	font-size:10pt;
+	text-align:left;
+	width:120px;
+}
+.rcp-ul-height{
+	height:20px;	
+}
+.rcp-relative-left-75px{
+	position: relative;
+  left: 75px;
+}
+
+.rcp-cursor{
+	cursor: pointer;
+	padding: 5px;
+  border-radius: 5px;
+}
+
+.rcp-cursor:HOVER {
+	background-color: #f8a631;
+  color: white;
+}
+
+.rcp-category-checked{
+	font-weight: 500;
+  color: #e09b23;
+}
+
+#category-filter-cancel {
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#category-filter-cancel:HOVER {
+	background-color: #f8a631;
+	color: white;
+}
+
+#category-filter {
+	display: none;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 1px;
+	border-color: #777;
+	padding: 6px;
+}
+
+.category-filter-box {
+	border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: #777;
+  padding: 3px;
+	margin: 2px;
+	cursor: pointer;
+	background-color: #e09b23;
+	color: white;
+}
+
+.category-filter-box:HOVER {
+	background-color: white;
+  color: #777;
+}

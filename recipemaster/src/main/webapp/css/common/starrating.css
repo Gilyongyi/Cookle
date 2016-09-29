@@ -1,0 +1,61 @@
+.rcp-starrating-btn {
+	position: relative;
+    font-size: 14px;
+    text-align: center;
+    width: 62px;
+    cursor: pointer;
+    left: 10px;
+    top: 5px;
+}
+
+#starrating-box {
+  margin-top: -12px;
+}
+
+#rcp-starrating {
+	float: left;
+	position: relative;
+	right:15px;
+	top:5px;
+	
+}
+
+#rcp-star-rating {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.rcp-rating {
+  position: relative;
+    float: left;
+    top:2px;
+}
+
+.rcp-rating label.full, .rcp-rating label:before{
+  cursor: pointer;	
+}
+
+.rcp-rating input {
+  display: none;
+}
+.rcp-rating label {
+  color: #ddd;
+  float: right;
+}
+.rcp-rating label:before {
+  margin: 2.6px;
+  font-size: 15px;
+  font-family: fontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rcp-rating .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rcp-rating > input:checked ~ label,
+.rcp-rating:not(:checked) > label:hover,
+.rcp-rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}

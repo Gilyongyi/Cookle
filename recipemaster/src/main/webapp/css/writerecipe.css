@@ -1,0 +1,319 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+  background-image: url("../../img/light-wooden-background.jpg");
+}
+
+.preview{
+	width: 150px;
+	height: 150px;
+}
+
+.rpimg{
+	height: 150px;
+	width: 150px;
+}
+
+.mtClose{
+  width: 14px !important;
+  height: 18px !important;
+  right: 32px;
+}
+
+.imagewrapper{
+	width: 150px;
+	height: 150px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.rcp-profileCover{
+	height: 358px;
+}
+.rcp-border{
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.wrapper{
+	background-color: #ffffff;
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+/*박상일 글쓰기 css*/
+.rcp-title hr{
+   width: 300px;
+   min-width: 300px;
+   margin-top: 15px;
+   margin-bottom: 40px;
+}
+
+.rcp-delMtSlot{
+   text-align: center;
+   height: 43px;
+   width: 100%;
+}
+
+.rcp-btn{
+  margin-top:25pt;
+  margin-bottom:30pt;
+  width: 100%;
+/*   height: 30pt; */
+  font-size: 12pt;
+}
+
+.rcp-title {
+  font-weight: bold;
+  font-size: 18pt;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.rcp-subtitle {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #DE9A33;
+  margin-top: 20pt;
+  margin-bottom: 10pt;
+  padding: 0px;
+}
+
+.files{
+    padding: 1em;
+    min-height: 150px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.height_150px{
+	height: 150px !important;
+	width: 425px !important;
+	margin-right: 10px; 
+}
+
+.mtWrapper{
+	width: 100%;
+  height: 24px;
+}
+
+#materialList{
+  margin-top: 10px;
+  text-align: center;
+}
+
+#materialList > hr{
+    border-top: 1px solid #333;
+    margin-top: 9px;
+}
+
+#seasoningList{
+  margin-top: 10px;
+  text-align: center;
+}
+
+#seasoningList > hr{
+    border-top: 1px solid #333;
+    margin-top: 9px;
+}
+
+/*삭제버튼*/
+.closeBtn {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.closeBtn:hover::before, .closeBtn:hover::after {
+  background: #1ebcc5;
+}
+.closeBtn::before, .closeBtn::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #000;
+}
+.closeBtn::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.closeBtn::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.closeBtn.thick::before, .closeBtn.thick::after {
+  height: 4px;
+  margin-top: -2px;
+}
+
+label{
+	color: #DE9A33 !important;
+	font-size: 12pt;
+	margin-bottom: 14px;
+}
+
+.inputstyle{
+	height: 41px !important;
+	border-radius: 2px !important;
+}
+
+.recipeNameWrapper{
+	width: 320px;
+  float: left;
+  margin-right: 25px;
+}
+
+.portionWrapper{
+    margin-left: 525px;
+}
+
+#recipeName{
+	width: 500px;
+}
+
+#portion{
+	width: 80px;
+	text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px !important;
+}
+
+input[name="materialName"]{
+	width: 100% !important;
+}
+
+input[name="materialAmount"]{
+  border: 0;
+  border-bottom: 1px solid #bbb;
+  outline: 0;
+  background-color: ;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: 3px;
+  width: 84px;
+  text-align: center;
+}
+
+.dropzonehover:hover{
+    box-shadow:
+      0 80px 0 0  rgba(0,0,0,0.25) inset, 
+      0 -80px 0 0  rgba(0,0,0,0.25) inset;
+}
+
+/* 조리시간 슬라이더 */
+.ui-slider-handle{
+  border: 2px solid #f55d5d !important;
+  background-color: white !important;
+}
+
+#slider-range-max {
+    background: #ffb9b9 !important;
+}
+/* 몇인분 사이즈 */
+.ui-spinner{
+	height: 41px;
+}
+
+/* post-it style */
+.post-it-note {
+  padding: 2em;
+  background: #FFF799;
+  position: relative;
+  min-height: 10em;
+  min-width: 13em;
+  margin: 1em auto;
+  margin-left: 33px;
+  margin-bottom: 10px;
+  box-shadow: 8px 30px 30px #bbb7b7;
+}
+
+.post-it-note:after {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  right: 2em;
+  border-width: 1em;
+  border-style: solid;
+  border-color: #FFF799;
+}
+
+.post-it-note:before {
+   content: "";
+   position: absolute;
+   bottom: -2em;
+   right: 0;
+   border-width: 2em 2em 0 0;
+   border-style: solid;
+   border-color: #f5e27f transparent;
+}
+
+.pdImgRemove{
+  right: 10px;
+}
+
+.rcp-category-name{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    color: black;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.rcp-category-btn{
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    color: #3e3e3e;
+    background: #fff;
+    font-size: 14px;
+    font-family: 'NS';
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 0 5px 0;
+    padding: 6px 13px;	
+}
+
+.rcp-category a{
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #444;
+}
+
+.rcp-category .active{
+	background-color: #DE9A33;
+	color: white;
+}
+
+.timer {
+    border: 0;
+    background-color: white;
+    padding: 1px;
+    font-size: 19px;
+}
+
+.timerInput {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+}

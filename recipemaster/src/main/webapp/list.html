@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="sticky-header-negative sticky-header-active">
+<head>
+<meta charset="utf-8">
+<title>Recipe List Page</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+</style>
+<script src="js/common/app-context.js"></script>
+<!-- Template css -->
+<link rel="stylesheet"
+  href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  
+<link rel="stylesheet"
+  href="node_modules/bxslider/dist/jquery.bxslider.css">
+   <link rel="stylesheet" href="css/mainlist.css"> 
+<link rel="stylesheet" href="css/rcp-template/theme.css">
+<link rel="stylesheet" href="css/template/styles.css">
+<link rel="stylesheet" href="css/rcp-template/theme-element.css">
+<link rel="stylesheet" href="css/rcp-template/skin-restaurant.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/template/animate.css">
+<link rel="stylesheet" href="css/template/commentTemp.css">
+<link rel="stylesheet" href="css/template/main.css"> 
+<link rel="stylesheet" href="css/common/starrating.css">
+
+<!-- <link rel="stylesheet" href="css/template/styles.css"> -->
+<link rel="stylesheet" href="js/template/jquery-ui-1.12.0/jquery-ui.min.css">
+
+<!-- 사용자 정의 css -->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/userinfobox.css">
+
+<link rel="stylesheet" href="css/detail2.css">
+
+<!-- 용이 -->
+<link rel="stylesheet" href="/node_modules/sweetalert/dist/sweetalert.css">
+
+<!-- 성현 -->
+<link rel="stylesheet" href="css/common/popup.css">
+<link rel="stylesheet" href="css/common/signup.css">
+<link rel="stylesheet" href="css/index_rankTabs.css">
+<!-- <link rel="stylesheet" href="css/list_topbar.css"> -->
+<link rel="stylesheet" href="css/list_categoryCheckbox.css">
+<link rel="stylesheet" href="css/list_countOrder.css">
+<link rel="stylesheet" href="css/common/loading.css">
+
+ 
+<!-- --- 아이콘 CDN ----- -->
+<!-- <script src="js/template/d9e67edb08.js"></script> -->
+
+</head>
+<body  data-spy="scroll"  data-target="#navSecondary" data-offset="170">
+<input type="hidden" id="more-rcp-list">
+<header id="header" class="header-narrow site-header wide" role="banner" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+     <div class="header-body" style="top:0px;"></div>
+</header>
+  
+	<div class="mouse-icon hidden-xs">
+		<div class="scroll"></div>
+	</div>
+	<!-- -------------------------------recipe list-------------------------------- -->
+ <section id="main-list">
+    <div>
+      <section id="rcp-custom-list">
+        <div class="rcp-list list0">
+          <div class="rcp-1024 searchResult">	          
+            <div id="search-result" class="row rcp-pageNo0">              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+<div id='detail_pop_up'>
+    <div class="rcp-detail-form row">
+
+      <div class="rcp-720" id="rcp-720">
+        <div class="rcp-header">
+          <h2 class="title"></h2> 
+          
+          <p class="hash"></p>
+          <p class="date"></p>
+          <div class="timerZone"></div>
+        </div>
+        <hr/>               
+        <div class="rcp-detail-body"></div>
+      </div>
+
+      <div class="rcp-304"></div>
+
+      <div class="rcp-taps">
+          <input id="detail-recipeNo" type="hidden" value="" name="recipeNo">
+      
+
+      </div>
+    </div>
+  </div>
+
+
+	<section class="p-xlg rcp-p-xlg-padding rcp-list-margin-top">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 center">
+	        <h2 class="mt-lg mb-sm">Get your <strong>Recipe</strong></h2>
+	        <p class="font-size-md">레시피, 쉐프, 재료에 대한 키워드로 검색이 가능합니다.<br>원하는 카테고리를 선택해주시면, 더 정확한 레시피 결과를 보실 수 있습니다.</p>
+	        <hr class="custom-divider" style="margin: 0;">
+	      </div>
+	    </div>
+	  </div>
+	</section>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        <div id="category-filter">
+          <span id="category-filter-cancel">모두취소</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<!-- <section class="p-xlg rcp-p-xlg-padding rcp-list-margin-bottom"> -->
+	<section class="rcp-p-xlg-padding rcp-list-margin-bottom">
+		<div class="container rcp-relative-left-75px">
+			<div class="row">
+        <ul class="rcp-ul-height">
+          <li class="category"><span class="rcp-cursor" value="한식">한식</span></li>
+          <li class="category"><span class="rcp-cursor" value="일식">일식</span></li>
+          <li class="category"><span class="rcp-cursor" value="중식">중식</span></li>
+          <li class="category"><span class="rcp-cursor" value="동남아/인도">동남아/인도</span></li>
+          <li class="category"><span class="rcp-cursor" value="멕시칸">멕시칸</span><li>
+          <li class="category"><span class="rcp-cursor" value="양식">양식</span></li>
+          <li class="category"><span class="rcp-cursor" value="퓨전">퓨전</span></li>
+        </ul>
+        <ul class="rcp-ul-height">
+          <li class="category"><span class="rcp-cursor" value="간식/야식">간식/야식</span></li>
+          <li class="category"><span class="rcp-cursor" value="술안주">술안주</span></li>
+          <li class="category"><span class="rcp-cursor" value="해장">해장</span></li>
+          <li class="category"><span class="rcp-cursor" value="손님접대">손님접대</span></li>
+          <li class="category"><span class="rcp-cursor" value="나들이">나들이</span><li>
+          <li class="category"><span class="rcp-cursor" value="파티/명절">파티/명절</span></li> 
+        </ul>
+        <ul class="rcp-ul-height">
+        <li class="category"><span class="rcp-cursor" value="육류">육류</span></li>  
+        <li class="category"><span class="rcp-cursor" value="채소류">채소류</span></li>  
+        <li class="category"><span class="rcp-cursor" value="콩/두부">콩/두부</span></li>  
+        <li class="category"><span class="rcp-cursor" value="과일">과일</span></li>  
+        <li class="category"><span class="rcp-cursor" value="달걀/유제품">달걀/유제품</span></li>  
+        <li class="category"><span class="rcp-cursor" value="면/만두">면/만두</span></li>
+        <li class="category"><span class="rcp-cursor" value="김치">김치</span></li>          
+        <li class="category"><span class="rcp-cursor" value="제철재료">제철재료</span></li>    
+        <li class="category"><span class="rcp-cursor" value="가공식품">가공식품</span></li>                 
+        </ul>
+        <ul>
+        <li class="category"><span class="rcp-cursor" value="밥">밥</span></li>          
+        <li class="category"><span class="rcp-cursor" value="면">면</span></li>          
+        <li class="category"><span class="rcp-cursor" value="국물">국물</span></li>          
+        <li class="category"><span class="rcp-cursor" value="찜/조림/구이">찜/조림/구이</span></li>          
+        <li class="category"><span class="rcp-cursor" value="볶음/튀김/부침">볶음/튀김/부침</span></li>          
+        <li class="category"><span class="rcp-cursor" value="나물/샐러드">나물/샐러드</span></li>          
+        <li class="category"><span class="rcp-cursor" value="김장/절임">김장/절임</span></li>          
+        <li class="category"><span class="rcp-cursor" value="베이킹/디저트">베이킹/디저트</span></li>          
+        <li class="category"><span class="rcp-cursor" value="양념/소스/잼">양념/소스/잼</span></li>          
+        
+        </ul>
+<!-- <li class="category"></li> -->          
+			</div>
+		</div>
+	</section>
+	
+	<!-- 
+	  한식 일식 중식 동남아/인도 멕시칸 양식 퓨전
+        간식/야식 술안주 해장 손님접대 나들이 파티/명절
+        육류 채소류 해산물 콩/두부 과일 달걀/유제품 면/만두 김치 제철재료 가공식품
+        밥 면 국물 찜/조림/구이 볶음/튀김/부침 나물/샐러드 김장/절임 베이킹/디저트 양념/소스/잼
+ -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div id="rcp-list-count">
+          <span id="recipe-count"></span>
+          <span id="order-grade-btn-text" class="order-btn">평점순</span> 
+          <input id="order-grade-btn" type="hidden" value="">
+          <span id="order-latest-btn-text" class="order-btn">최신순</span> 
+          <input id="order-latest-btn" type="hidden" value="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section class="ht-section hs-recipes grid">
+
+		<div id="tabs-1">
+			<div class="rcp-main-right">
+				<div class="rcp-subscribe"></div>
+				<!-- <div id="rcp-list-count">
+					<span id="recipe-count"></span>
+					<span id="order-grade-btn-text" class="order-btn">평점순▼</span> 
+          <input id="order-grade-btn" type="hidden" value="DESC">
+					<span id="order-latest-btn-text" class="order-btn">최신순▼</span> 
+					<input id="order-latest-btn" type="hidden" value="DESC">
+				</div> -->
+				<div class="hs-content">
+					<div class="container">
+						<div class="row">
+						<div class="rcp-mypage-section">
+						<div></div>
+						</div>
+						
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+  <!-- 로딩시 뜨는 이미지 -->
+  <div class="wrap-loading display-none">
+    <div><img src="img/loading.gif"></div>
+  </div> 
+
+  <input id="search-pageNo" type="hidden" value="1">
+  <input id="sort-condition" type="hidden" value="">
+<!-- {{#each representImages}}  
+<input type="hidden" class="forBackgroundRepresentImg" value="{{this}}">
+{{/each}}
+ -->  
+ 
+  <script id="recipe-detail-main-template"
+    type="text/x-handlebars-template">
+    
+               <div class="rcp-body" name="rcp-body" >
+              <div>
+                <div class="rcp-title-size">
+                   
+                  <h6 class="rcp-bodyTitle">Main</h6>
+                    
+                </div>
+                <ul class="rcp-mainSlider">
+                  {{#each representImages}}
+                <li class="rcp-mainImg"><img class="rcp-images rcp-images-main rcp-mainImg1" src="img/representImg/{{this}}" class="rcp-images" name="rcp-images-position" id="rcp-images-position"></li>
+                    {{/each}}
+                </ul>
+               </div>
+               <div class="rcp-explanation" name="rcp-explanation">
+                  <p></p>
+                </div>
+            </div>
+
+</script>
+
+
+
+
+  <script id="recipe-detail-template" type="text/x-handlebars-template">
+    {{#recipeProcedure}}
+              <div class="rcp-body" name="rcp-body" >
+              <div>
+                <div class="rcp-title-size">
+                    
+                  <h6 class="rcp-bodyTitle">STEP{{inc @index}}</h6>
+                  {{#if recipeTime}}
+                    <button class="timerBtn" type="button"> 
+                      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      {{recipeTime}}분 타이머 시작!!
+                    </button>
+                    <div class="timerBtn padding_top_15px display_none"> 
+                      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      타이머 실행중!!
+                    </div>
+                    <input type="hidden" value="{{recipeTime}}"/>
+                  {{/if}}
+                  
+                </div>
+                <div>
+               
+                </div>
+               </div>
+                <img src="img/recipeImg/{{recipeProduceImage}}" class="rcp-images">
+               <div class="rcp-explanation" name="rcp-explanation">
+                  <p>{{recipeProduce}}</p>
+                </div>
+               <div class="rcp-nav-down">
+                   
+               </div>
+            </div>
+{{/recipeProcedure}}
+</script>
+
+  <script id="recipe-comment" type="text/x-handlebars-template">
+{{#each data}}
+<div class="cs-comments-area">           
+ <span class="rcp-comment-indexNum"></span> 
+                <article>
+                  
+                  <div class="cs-comment-author">
+                   <img class="avatar" src="img/profileImg/{{user.image}}" alt=""> 
+                      <b><a href="#">{{user.userName}}</a></b> 
+                          <a class="cs-comment-metadata" href="#"> 
+                         <span class="rcp-comment-date">{{recipeCommentDate}}</span>
+                    </a>
+                    <input type="hidden" id="commentNo" name="commentNo" value={{commentNo}}>
+                    {{#x-button}}
+                    <a href="#" id="deleteComment">✖</a>                     
+                    {{/x-button}}
+                  </div>
+                  <div class="cs-comment-content">
+                    <p>{{recipeComment}}</p>                    
+                  </div>
+                </article>   
+          </div>
+{{/each}}
+  </script>
+  <script id="recipe-detail-304-info-template"
+    type="text/x-handlebars-template">
+
+<div class="detail-images">
+<input type="hidden" class="rcp-hidden-userNo" value="{{data.userNo}}">
+<input type="hidden" class="rcp-hidden-recipeNo" value="{{data.recipeNo}}">
+<input type="hidden" class="rcp-hidden-email" value="{{data.user.email}}">
+
+<a href="#"><img src="img/profileImg/{{data.user.image}}" class="rcp-right-profile  rcp-profile img-circle"></a>
+<a class="rcp-nickname" href="#">{{data.user.userName}}</a>
+<h4 class="rcp-detail-title"></h4>
+<div align="center">
+<a href="#" class="rcp-detail-scrap">
+<div class="rcp-scrap-button-text rcp-scrap-button-text-margin" >
+<i class="glyphicon glyphicon-paperclip rcp-i-tag-margin-right-top"></i>  스크랩</div></a>
+</div>
+
+<a href="#" class="rcp-detail-like">
+<div class="rcp-scrap-button-text-like " name="">
+<i class="glyphicon glyphicon-heart-empty rcp-i-tag-margin-right-top" ></i>  좋아요</div></a>
+<div class="rcp-info-items">
+   <div class="rcp-icons">
+   <i class="fa fa-eye" aria-hidden="true"></i>
+   <i class="fa fa-heart" aria-hidden="true"></i>
+   <i class="fa fa-comments" aria-hidden="true"></i>
+   <i class="fa fa-external-link" aria-hidden="true"></i>
+   <i class="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div class="rcp-icons-names">
+    <p>조회수</p>
+    <p>좋아요</p>
+    <p>댓글</p>
+    <p>스크랩</p> 
+    <p>평점</p>
+  </div>
+  <div class="rcp-icons-info" align="right">
+    <p>{{data.hits}}</p>
+    <p>{{data.countLike}}</p>
+    <p>{{data.countComment}}</p>
+    <p>{{data.countScrap}}</p>
+    <p>{{data.gradePoint}}</p>  
+  </div>
+</div>
+<div class="rcp-info-filter">
+    <hr class="rcp-info-next"/>
+    
+</div>
+<div class="rcp-info-images">
+
+</div>
+<div class="rcp-detail-step">
+  </div>
+
+</div>
+</script>
+
+  <script id="recipe-detail-main-images-template"
+    type="text/x-handlebars-template">
+ <div class="rcp-main"> 
+      <a href="#" name="rcp-nav-images">MAIN</a>      
+    <a href="#" name="rcp-nav-bgImages-button" role="button" ><div style= "background-image:url('img/representImg/{{this}}')" class="rcp-info-images-emts"></div></a>
+</script>
+
+  <script id="recipe-detail-step-images-template"
+    type="text/x-handlebars-template">
+{{#recipeProcedure}}
+     <div class="rcp-main"> 
+      <a href="#" name="rcp-nav-images">STEP {{inc @index}}</a>
+      <div style="float:right">         
+      </div>
+     <a href="#" name="rcp-nav-bgImages-button" role="button" >
+      <div style= background-image:url("img/recipeImg/{{recipeProduceImage}}") class="rcp-info-images-emts"></div></a> 
+    </div>
+{{/recipeProcedure}}
+</script>
+ 
+ 
+<script id="temp" type="text/x-handlebars-template">
+
+                
+
+{{#each data}}
+
+<div>
+<div class="isotope-grid" id="grid-2">
+          <div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+            <div class="entry-inner">
+              {{#each representImages}}  
+              <input type="hidden" class="forBackgroundRepresentImg" value="{{this}}">
+              {{/each}}
+             <p class="rcp-count-images">{{countImage representImages}}</p>
+              <div class="rcp-count-images-bg">
+              </div>
+              <div class="entry-media" name="recipe-subscribe-image" style="background-image:url(img/representImg/{{representImages representImages}}">
+               
+                <div class="entry-action">
+                  <div class="entry-action-inner">                  
+                  </div>
+                </div>
+              </div>
+              <!-- ./ entry-media -->
+              <div class="content-wrapper">
+                <h3 class="entry-name"><a href="#">
+                <input type="hidden" name="recipeNo" value="{{recipeNo}}">
+                <p class="detail rcp-p-black">{{recipeName}}</p></a></h3>                
+                <a href="mypage.html?{{user.email}}">
+                <input type="hidden" class="rcp-hidden-email" value="{{user.email}}">
+                <p class="entry-author rcp-userName">{{user.userName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{recipeDate}}</p>
+                </a>
+                <div class="entry-meta">
+                  <div class="foo-wrapper">
+                     <input type="hidden" name="recipeNo" value="{{recipeNo}}">
+                    <span>
+                    <a href="#" class="rcp-like {{#isLike}}active{{/isLike}}"><div class="glyphicon glyphicon-heart-empty rcp-i-tag-margin-right-top"></div>
+                    <span>좋아요 <span>{{countLike}}<span></span></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    
+                    <span class="meta-time">{{cookTime}}분 소요</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                    <span>
+                     <a href="#" class="rcp-scrap {{#isScrap}}active{{/isScrap}}"><div class="glyphicon glyphicon-paperclip rcp-i-tag-margin-right-top"></div>
+                    <span>스크랩 <span>{{countScrap}}</span></span></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ entry-content -->
+            </div>
+            <!-- /.entry-inner -->
+          </div>
+        
+          </div>
+</div>
+{{/each}}
+</div>
+</script>
+
+  <script id="recipe-comment-addForm" type="text/x-handlebars-template">
+        <!-- <h2>Leave a Reply</h2> -->
+        <div id="respond" class="comment-respond clearfix">
+          <div class="grid-container">
+            
+              <input type="hidden" name="recipeNo" id="forCommentRecipeNumber" value="">
+              <div class="grid desk-12 alpha omega">
+                <div class="label">Comment</div>
+                <textarea name="recipeComment"></textarea>
+              </div>
+
+              <p class="form-submit clearfix">
+                <input name="rcp-submit" class="button primary" type="button" value="Post Comment" />                
+                <div class="form-allowed-tags" style="display: none;">
+                 
+                </div>
+              </p>
+              
+          
+          </div>
+        </div><!-- #respond -->
+</script>
+
+
+
+  <!-- 별점주기 -->
+  <script id="starrating-template" type="text/x-handlebars-template">
+    <div id="starrating-box">
+    <br/>  
+    {{#if checkDuplicateGrade}}
+      <div>
+        <span id="rcp-starrating" align="left">평가하기</span>
+        
+      </div>
+      <div class="rcp-rating">
+        <input id="star5" name="rating" type="radio" value="5"/>
+        <label for="star5" class="full"></label>
+        <input id="star4.5" name="rating" type="radio" value="4.5"/>
+        <label for="star4.5" class="half"></label>
+        <input id="star4" name="rating" type="radio" value="4"/>
+        <label for="star4" class="full"></label>
+        <input id="star3.5" name="rating" type="radio" value="3.5"/>
+        <label for="star3.5" class="half"></label>
+        <input id="star3" name="rating" type="radio" value="3"/>
+        <label for="star3" class="full"></label>
+        <input id="star2.5" name="rating" type="radio" value="2.5"/>
+        <label for="star2.5" class="half"></label>
+        <input id="star2" name="rating" type="radio" value="2"/>
+        <label for="star2" class="full"></label>
+        <input id="star1.5"  name="rating" type="radio" value="1.5"/>
+        <label for="star1.5" class="half"></label>
+        <input id="star1"  name="rating" type="radio" value="1"/>
+        <label for="star1" class="full"></label>
+        <input id="star0.5"  name="rating" type="radio" value="0.5"/>
+        <label for="star0.5" class="half"></label>
+      </div>
+      <div id="rcp-starrating-btn-apply" class="rcp-starrating-btn">
+        등록 </div>
+    {{else}}
+      <div align="left">평가하기</div>      
+      <div align="left">참여하셨습니다.</div>
+    {{/if}}
+    </div>
+  </script>
+  
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- <script src="js/template/main.js"></script> -->	
+	<script src="js/template/wow.min.js"></script>
+	<script src="js/template/jquery-slider-rolling.js"></script>
+	<script src="js/mouseover.js"></script>
+	<script src="js/template/jquery-ui-1.12.0/jquery-ui.min.js"></script>
+	<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  
+	<!--  사용자 js -->
+	<script src="js/jquery.bpopup.min.js"></script>
+ 
+ <!-- <script src="js/list_recipeSearch.js"></script> -->
+ 
+	<script src="js/login.js"></script>
+	<!-- 용이 userUpdate -->
+	<!-- <script src="js/updateUser.js"></script> -->
+	<!-- 성현 -->	
+	<script src="js/common/popup.js"></script>
+  <script src="js/common/chefCard.js"></script>
+  <!-- <script src="js/common/signup.js"></script> -->
+	<script src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>	
+	<script src="js/common/starrating.js"></script>	
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="js/recipeDetail.js"></script>    
+	<script src="js/common/starrating.js"></script>    
+	
+  <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="node_modules/sweetalert/dist/sweetalert-dev.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		// 상단바 불러오기
+		//$('#topBtn').load("topsearchbar.html");	  		
+		$('.header-body').load('list_topNavBar.html');
+		
+	  /* 준모3 */				  
+		if(eval(sessionStorage.getItem('data'))!=null){		 
+		  $('#topbarUserImg').html("<img class='rcp-barimg dropdown-trigger img-circle' src='img/Chef3.jpg' />");		  
+		}
+
+		$('.profile-dropdown:has(.active)').bind('click', function() {
+		});
+
+		$(window).bind('scroll', function(e) {
+			$('.main-nav__dropdown').removeClass('active');
+		});
+
+		$('.dropdown-trigger').on('click', function() {
+	      dropdownClick('.profile-dropdown', '.mobile-menu-dropdown');
+			  /* 용이 추가() */    
+			    if(eval(sessionStorage.getItem('data'))[0].userNo!=null){
+		         $('#profileEmail').text(eval(sessionStorage.getItem('data'))[0].email);
+		         $('#profileName').text(eval(sessionStorage.getItem('data'))[0].userName);
+		         $('#profileGrade').text(eval(sessionStorage.getItem('data'))[0].recipeUrl);
+		  /* 용이 추가() */       
+		         $('#introduce').text(eval(sessionStorage.getItem('data'))[0].intro);
+		 	     }
+			   });
+		$('.dropdown-trigger').on('scroll', function() {
+			dropdownClick('.profile-dropdown', '.mobile-menu-dropdown');
+		});
+
+		$('.dropdown-trigger--mobile').on('click', function() {
+			dropdownClick('.mobile-menu-dropdown', '.profile-dropdown');
+		});
+
+		$('#userInfoEditBtn').on('click', function() {
+			$('#editUserInfo-pop-up-banner').bPopup();
+			if(eval(sessionStorage.getItem('data'))[0].userNo!=null){
+			         $('#updateBoxEmail').text(eval(sessionStorage.getItem('data'))[0].email);
+			         $('#updateBoxName').text(eval(sessionStorage.getItem('data'))[0].userName);
+			         $('#profileGrade').text(eval(sessionStorage.getItem('data'))[0].recipeUrl);
+
+			 }
+		});
+	});
+	</script>
+<script src="js/list_recipeSearch.js"></script>	
+</body>
